@@ -251,3 +251,13 @@ document.addEventListener('DOMContentLoaded', () => {
     loadComponents();
     initCountdowns();
 });
+
+// Handle browser back button (bfcache) to clear forms like footer subscription
+window.addEventListener('pageshow', (event) => {
+    if (event.persisted) {
+        const forms = document.querySelectorAll('form');
+        forms.forEach(f => f.reset());
+        const msg = document.getElementById('subscription-message');
+        if (msg) msg.classList.add('hidden');
+    }
+});
