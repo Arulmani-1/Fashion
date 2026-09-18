@@ -63,7 +63,12 @@
 <input id="login-email" class="form-control" placeholder="Email Address" required="" type="email"/>
 </div>
 <div>
-<input class="form-control" placeholder="Password" required="" type="password"/>
+<div class="relative">
+<input id="login-password" class="form-control pr-10" placeholder="Password" required="" minlength="8" type="password"/>
+<button type="button" class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-black transition focus:outline-none" onclick="togglePasswordVisibility('login-password', this)">
+<i class="far fa-eye-slash"></i>
+</button>
+</div>
 </div>
 
 
@@ -131,6 +136,21 @@
                 });
             }
         });
+
+        function togglePasswordVisibility(inputId, button) {
+            const input = document.getElementById(inputId);
+            const icon = button.querySelector('i');
+            
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            } else {
+                input.type = 'password';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            }
+        }
     </script>
 </body>
 </html>
