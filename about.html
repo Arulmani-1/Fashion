@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stackly - About Us</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { black: '#111111', offwhite: '#F6F5F2', softgray: '#E9E7E2', darkgray: '#444444', accent: '#7f2a4f' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Playfair Display', 'serif'] }
+                }
+            }
+        }
+    </script>
+<!-- AOS CSS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<!-- Custom CSS -->
+<link href="css/style.css" rel="stylesheet"/>
+</head>
+<body class="bg-offwhite text-black antialiased">
+<div class="page-transition"></div>
+<header class="w-full transition-all duration-300" id="navbar-container"></header>
+<main>
+<!-- Hero -->
+<section class="relative w-full h-[350px] md:h-[450px] mt-20 mb-16">
+    <img src="assets/images/hero_about.webp" class="absolute inset-0 w-full h-full object-cover" alt="About Hero">
+    <div class="absolute inset-0 bg-black/40"></div>
+    <div class="absolute inset-0 flex flex-col items-center justify-center text-white px-6">
+        <h1 class="text-5xl md:text-7xl display-font mb-4 tracking-wide">About Us</h1>
+    </div>
+</section>
+<section class="pb-20 px-6 text-center max-w-4xl mx-auto">
+<p class="text-lg text-gray-600 font-light">Born from a desire to merge timeless elegance with modern comfort, Stackly represents the new era of fashion curation.</p>
+</section>
+<!-- Established - 1995 -->
+<section class="py-24 px-6 md:px-12 max-w-screen-2xl mx-auto">
+    <div class="flex flex-col md:flex-row items-center gap-16">
+        <div class="w-full md:w-1/2" data-aos="fade-right">
+            <img src="assets/images/about/about_est.webp" alt="Established 1995" class="w-full h-auto object-cover grayscale">
+        </div>
+        <div class="w-full md:w-1/2" data-aos="fade-left">
+            <h2 class="text-3xl md:text-4xl mb-6">Established - 1995</h2>
+            <p class="text-gray-600 text-sm leading-relaxed max-w-lg">Ecomus was founded in 1995 by Jane Smith, a fashion lover with a passion for timeless style. Jane had always been drawn to classic pieces that could be worn season after season, and she believed that there was a gap in the market for a store that focused solely on classic women's clothing. She opened the first store in a small town in New England, where it quickly became a local favorite.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Our mission -->
+<section class="py-24 px-6 md:px-12 max-w-screen-2xl mx-auto">
+    <div class="flex flex-col md:flex-row-reverse items-center gap-16">
+        <div class="w-full md:w-1/2 relative h-[600px]" data-aos="fade-left">
+            <img src="assets/images/about/about_mission_1.webp" alt="Our mission 1" class="absolute top-0 left-0 w-3/4 h-[500px] object-cover">
+            <img src="assets/images/about/about_mission_2.webp" alt="Our mission 2" class="absolute bottom-0 right-0 w-1/2 h-[350px] object-cover border-8 border-offwhite">
+        </div>
+        <div class="w-full md:w-1/2" data-aos="fade-right">
+            <h2 class="text-3xl md:text-4xl mb-6">Our mission</h2>
+            <p class="text-gray-600 text-sm leading-relaxed max-w-lg">Our mission is to empower people through sustainable fashion. We want everyone to look and feel good, while also doing our part to help the environment. We believe that fashion should be stylish, affordable and accessible to everyone. Body positivity and inclusivity are values that are at the heart of our brand.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Quality is our priority -->
+<section class="py-24 px-6 md:px-12">
+    <div class="max-w-screen-xl mx-auto bg-[#F9F8F3] p-16 rounded-xl border border-[#f0eedc]">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl mb-4">Quality is our priority</h2>
+            <p class="text-gray-600 text-sm">Our talented stylists have put together outfits that are perfect for the season.<br>They've variety of ways to inspire your next fashion-forward look.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center" data-aos="fade-up" data-aos-delay="100">
+            <div>
+                <div class="w-20 h-20 mx-auto border border-black rounded-full flex items-center justify-center mb-6">
+                    <i class="fas fa-leaf text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-medium mb-3">High-Quality Materials</h3>
+                <p class="text-gray-500 text-xs leading-relaxed">Crafted with precision and excellence, our activewear is meticulously engineered using premium materials to ensure unmatched comfort and durability.</p>
+            </div>
+            <div>
+                <div class="w-20 h-20 mx-auto border border-black rounded-full flex items-center justify-center mb-6">
+                    <i class="fas fa-gem text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-medium mb-3">Laconic Design</h3>
+                <p class="text-gray-500 text-xs leading-relaxed">Simplicity refined. Our activewear embodies the essence of minimalistic design, delivering effortless style that speaks volumes.</p>
+            </div>
+            <div>
+                <div class="w-20 h-20 mx-auto border border-black rounded-full flex items-center justify-center mb-6">
+                    <i class="fas fa-border-all text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-medium mb-3">Various Sizes</h3>
+                <p class="text-gray-500 text-xs leading-relaxed">Designed for every body and anyone, our activewear embraces diversity with a wide range of sizes and shapes, celebrating the beauty of individuality.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our customer's reviews -->
+<section class="py-24 px-6 md:px-12 max-w-screen-2xl mx-auto">
+    <div class="swiper reviewSwiper" data-aos="fade-up">
+        <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+                <div class="flex flex-col md:flex-row items-center gap-16 h-full">
+                    <div class="w-full md:w-1/2">
+                        <h2 class="text-3xl md:text-4xl mb-12">Our customer's reviews</h2>
+                        <div class="text-7xl text-gray-200 mb-2 font-serif leading-none">&ldquo;</div>
+                        <div class="flex text-orange-400 mb-6 text-sm space-x-1">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-8 max-w-lg">I have been shopping with this web fashion site for over a year now and I can confidently say it is the best online fashion site out there. The shipping is always fast and the customer service team is friendly and helpful. I highly recommend this site to anyone looking for affordable clothing.</p>
+                        <p class="font-bold text-[10px] uppercase mb-10">JENIFER UNIZ</p>
+                        <div class="flex space-x-4">
+                            <div class="review-prev w-8 h-8 rounded-full border border-black flex items-center justify-center cursor-pointer hover:bg-gray-100 transition"><i class="fas fa-chevron-left text-[10px]"></i></div>
+                            <div class="review-next w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center cursor-pointer hover:bg-gray-100 transition"><i class="fas fa-chevron-right text-[10px] text-gray-400"></i></div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 flex justify-center md:justify-end">
+                        <img src="assets/images/about/review_2.webp" alt="Jenifer Uniz" class="w-[280px] md:w-[320px] h-[340px] md:h-[400px] object-cover rounded-sm">
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+                <div class="flex flex-col md:flex-row items-center gap-16 h-full">
+                    <div class="w-full md:w-1/2">
+                        <h2 class="text-3xl md:text-4xl mb-12">Our customer's reviews</h2>
+                        <div class="text-7xl text-gray-200 mb-2 font-serif leading-none">&ldquo;</div>
+                        <div class="flex text-orange-400 mb-6 text-sm space-x-1">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-8 max-w-lg">I have been shopping with this web fashion site for over a year now and I can confidently say it is the best online fashion site out there. The shipping is always fast and the customer service team is friendly and helpful. I highly recommend this site to anyone looking for affordable clothing.</p>
+                        <p class="font-bold text-[10px] uppercase mb-10">ROBERT SMITH</p>
+                        <div class="flex space-x-4">
+                            <div class="review-prev w-8 h-8 rounded-full border border-black flex items-center justify-center cursor-pointer hover:bg-gray-100 transition"><i class="fas fa-chevron-left text-[10px]"></i></div>
+                            <div class="review-next w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center cursor-pointer hover:bg-gray-100 transition"><i class="fas fa-chevron-right text-[10px] text-gray-400"></i></div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 flex justify-center md:justify-end">
+                        <img src="assets/images/about/review_1.webp" alt="Robert smith" class="w-[280px] md:w-[320px] h-[340px] md:h-[400px] object-cover rounded-sm">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Shop Gram -->
+<section class="py-24 max-w-screen-2xl mx-auto">
+    <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-3xl md:text-4xl mb-4">Shop Gram</h2>
+        <p class="text-gray-600 text-sm">Inspire and let yourself be inspired, from one unique fashion to another.</p>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-4 px-6 md:px-12" data-aos="fade-up" data-aos-delay="100">
+        <div class="aspect-square overflow-hidden rounded-lg group cursor-pointer relative">
+            <img src="assets/images/about/shop_gram_1.webp" alt="Shop Gram 1" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+        </div>
+        <div class="aspect-square overflow-hidden rounded-lg group cursor-pointer relative">
+            <img src="assets/images/about/shop_gram_2.webp" alt="Shop Gram 2" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+        </div>
+        <div class="aspect-square overflow-hidden rounded-lg group cursor-pointer relative">
+            <img src="assets/images/about/shop_gram_3.webp" alt="Shop Gram 3" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+        </div>
+        <div class="aspect-square overflow-hidden rounded-lg group cursor-pointer relative">
+            <img src="assets/images/about/shop_gram_4.webp" alt="Shop Gram 4" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+        </div>
+        <div class="aspect-square overflow-hidden rounded-lg group cursor-pointer relative">
+            <img src="assets/images/about/shop_gram_5.webp" alt="Shop Gram 5" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+        </div>
+    </div>
+</section>
+</main>
+<footer class="w-full mt-auto" id="footer-container"></footer>
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var reviewSwiper = new Swiper(".reviewSwiper", {
+            slidesPerView: 1,
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: ".review-next",
+                prevEl: ".review-prev",
+            },
+        });
+    });
+</script>
+</body>
+</html>

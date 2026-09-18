@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stackly - Services</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { black: '#111111', offwhite: '#F6F5F2', softgray: '#E9E7E2', darkgray: '#444444', accent: '#7f2a4f' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Playfair Display', 'serif'] }
+                }
+            }
+        }
+    </script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<link href="css/style.css" rel="stylesheet"/>
+</head>
+<body class="bg-offwhite text-black antialiased">
+<div class="page-transition"></div>
+<header class="w-full transition-all duration-300" id="navbar-container"></header>
+<main>
+<!-- Hero -->
+<section class="relative w-full h-[350px] md:h-[450px] mt-20 mb-16">
+    <img src="assets/images/hero_services.webp" class="absolute inset-0 w-full h-full object-cover" alt="Services Hero">
+    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="absolute inset-0 flex flex-col items-center justify-center text-white px-6">
+        <h1 class="text-5xl md:text-7xl display-font mb-6 tracking-wide">Services</h1>
+        <p class="text-lg text-gray-200 font-light max-w-xl mx-auto text-center">Beyond the garment. Discover our suite of premium fashion services.</p>
+    </div>
+</section>
+<!-- Google Fonts for Cursive Text -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+.signature-text {
+    font-family: 'Great Vibes', cursive;
+    color: #c99c5c;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+</style>
+
+<!-- Editorial Block 1 -->
+<section class="max-w-screen-xl mx-auto px-6 py-20 overflow-hidden">
+    <div class="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
+        <!-- Text Box -->
+        <div class="w-full md:w-1/2" data-aos="fade-right" data-aos-duration="1000">
+            <h5 class="text-gray-400 italic font-serif mb-2 text-sm">From The Fashion</h5>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold uppercase tracking-tight text-black mb-2">We Create Fashion</h2>
+            <h4 class="text-lg md:text-xl font-serif italic mb-6 text-black">Candid Enthusiasm from the Summer</h4>
+            <div class="w-16 h-[2px] bg-black mb-8"></div>
+            <p class="text-gray-500 text-sm md:text-base leading-relaxed mb-10">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis Theme natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam rhoncus. Maecenas tempus, tellus eget condimentum. Em quam semper libero, sit amet adipiscing sem.</p>
+            <a href="store.html" class="inline-block bg-black text-white px-10 py-4 text-sm font-serif italic hover:bg-gray-800 transition">read more</a>
+        </div>
+        <!-- Image Box -->
+        <div class="w-full md:w-1/2 relative mt-10 md:mt-0" data-aos="fade-left" data-aos-duration="1000">
+            <img src="assets/images/srv_events.webp" alt="Events" class="w-full h-auto object-cover aspect-[4/3] shadow-lg">
+            <span class="signature-text absolute -bottom-10 left-10 md:-bottom-16 md:left-12 text-7xl md:text-8xl lg:text-9xl z-10" style="transform: rotate(-10deg);">events</span>
+        </div>
+    </div>
+</section>
+
+<!-- Editorial Block 2 -->
+<section class="max-w-screen-xl mx-auto px-6 py-20 overflow-hidden">
+    <div class="flex flex-col md:flex-row-reverse items-center gap-12 lg:gap-20">
+        <!-- Text Box -->
+        <div class="w-full md:w-1/2 md:pl-10" data-aos="fade-left" data-aos-duration="1000">
+            <h5 class="text-gray-400 italic font-serif mb-2 text-sm">From The Fashion</h5>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold uppercase tracking-tight text-black mb-2">We Create Fashion</h2>
+            <h4 class="text-lg md:text-xl font-serif italic mb-6 text-black">Curabitur tortor nec eleifend, justo ante</h4>
+            <div class="w-16 h-[2px] bg-black mb-8"></div>
+            <p class="text-gray-500 text-sm md:text-base leading-relaxed mb-10">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean cot uodo ligul get dolor. Aenean massa. Cum sociis Theme natoquepe natibus et magnis dis parturient montes, nascetur ridiculus mus. Eti am rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.</p>
+            <a href="store.html" class="inline-block bg-black text-white px-10 py-4 text-sm font-serif italic hover:bg-gray-800 transition">read more</a>
+        </div>
+        <!-- Image Box -->
+        <div class="w-full md:w-1/2 relative mt-10 md:mt-0" data-aos="fade-right" data-aos-duration="1000">
+            <img src="assets/images/srv_editorial.webp" alt="Editorial" class="w-full h-auto object-cover aspect-[4/3] shadow-lg">
+            <span class="signature-text absolute -bottom-10 right-10 md:-bottom-16 md:-right-8 text-7xl md:text-8xl lg:text-[10rem] z-10" style="transform: rotate(-10deg);">editorial</span>
+        </div>
+    </div>
+</section>
+
+<!-- Editorial Block 3 -->
+<section class="max-w-screen-xl mx-auto px-6 py-20 overflow-hidden mb-16">
+    <div class="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
+        <!-- Text Box -->
+        <div class="w-full md:w-1/2" data-aos="fade-right" data-aos-duration="1000">
+            <h5 class="text-gray-400 italic font-serif mb-2 text-sm">From The Fashion</h5>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold uppercase tracking-tight text-black mb-2">We Create Fashion</h2>
+            <h4 class="text-lg md:text-xl font-serif italic mb-6 text-black">Curabitur tortor nec eleifend, justo ante</h4>
+            <div class="w-16 h-[2px] bg-black mb-8"></div>
+            <p class="text-gray-500 text-sm md:text-base leading-relaxed mb-10">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis Theme natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam rhoncus. Maecenas tempus, tellus eget condimentum. Em quam semper libero, sit amet adipiscing sem.</p>
+            <a href="store.html" class="inline-block bg-black text-white px-10 py-4 text-sm font-serif italic hover:bg-gray-800 transition">read more</a>
+        </div>
+        <!-- Image Box -->
+        <div class="w-full md:w-1/2 relative mt-10 md:mt-0" data-aos="fade-left" data-aos-duration="1000">
+            <img src="assets/images/srv_fashionable.webp" alt="Fashionable" class="w-full h-auto object-cover aspect-[4/3] shadow-lg">
+            <span class="signature-text absolute -bottom-10 right-4 md:-bottom-16 md:-right-10 text-7xl md:text-8xl lg:text-[9rem] z-10" style="transform: rotate(-10deg);">fashionable</span>
+        </div>
+    </div>
+</section>
+
+<!-- Services List -->
+<section class="px-6 md:px-12 max-w-screen-xl mx-auto mb-24">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16 stagger-cards">
+<!-- Service 1 -->
+<div class="service-card group cursor-pointer border-b border-gray-300 pb-16 relative">
+<div class="flex justify-between items-start mb-6">
+<span class="text-xl font-light text-gray-400 group-hover:text-accent transition duration-300 transform group-hover:-translate-y-2">01</span>
+<i class="fas fa-arrow-right transform -rotate-45 opacity-0 group-hover:opacity-100 group-hover:rotate-0 transition duration-500 text-xl relative z-10"></i>
+</div>
+<h3 class="text-3xl display-font mb-4">Personal Styling</h3>
+<p class="text-gray-600 font-light text-sm w-3/4">One-on-one sessions with our expert stylists to curate a wardrobe that perfectly aligns with your lifestyle.</p>
+<!-- Hover Image Reveal -->
+<div class="absolute right-0 bottom-0 w-32 h-40 opacity-0 group-hover:opacity-100 transition duration-500 transform translate-y-8 group-hover:translate-y-0 z-[-1]">
+<img alt="Styling" class="w-full h-full object-cover rounded shadow-lg grayscale" src="assets/images/img_73459288.webp"/>
+</div>
+</div>
+<!-- Service 2 -->
+<div class="service-card group cursor-pointer border-b border-gray-300 pb-16 relative">
+<div class="flex justify-between items-start mb-6">
+<span class="text-xl font-light text-gray-400 group-hover:text-accent transition duration-300 transform group-hover:-translate-y-2">02</span>
+<i class="fas fa-arrow-right transform -rotate-45 opacity-0 group-hover:opacity-100 group-hover:rotate-0 transition duration-500 text-xl relative z-10"></i>
+</div>
+<h3 class="text-3xl display-font mb-4">Fashion Consulting</h3>
+<p class="text-gray-600 font-light text-sm w-3/4">Strategic direction and trend analysis for emerging fashion brands and private labels.</p>
+<!-- Hover Image Reveal -->
+<div class="absolute right-0 bottom-0 w-32 h-40 opacity-0 group-hover:opacity-100 transition duration-500 transform translate-y-8 group-hover:translate-y-0 z-[1]">
+<img alt="Consulting" class="w-full h-full object-cover rounded shadow-lg grayscale group-hover:grayscale-0 transition duration-500" src="assets/images/srv_consulting.webp"/>
+</div>
+</div>
+<!-- Service 3 -->
+<div class="service-card group cursor-pointer border-b border-gray-300 pb-16 relative">
+<div class="flex justify-between items-start mb-6">
+<span class="text-xl font-light text-gray-400 group-hover:text-accent transition duration-300 transform group-hover:-translate-y-2">03</span>
+<i class="fas fa-arrow-right transform -rotate-45 opacity-0 group-hover:opacity-100 group-hover:rotate-0 transition duration-500 text-xl relative z-10"></i>
+</div>
+<h3 class="text-3xl display-font mb-4">Custom Collections</h3>
+<p class="text-gray-600 font-light text-sm w-3/4">Bespoke tailoring and custom garment creation for special occasions and exclusive clientele.</p>
+<!-- Hover Image Reveal -->
+<div class="absolute right-0 bottom-0 w-32 h-40 opacity-0 group-hover:opacity-100 transition duration-500 transform translate-y-8 group-hover:translate-y-0 z-[1]">
+<img alt="Custom Collections" class="w-full h-full object-cover rounded shadow-lg grayscale group-hover:grayscale-0 transition duration-500" src="assets/images/srv_custom.webp"/>
+</div>
+</div>
+<!-- Service 4 -->
+<div class="service-card group cursor-pointer border-b border-gray-300 pb-16 relative">
+<div class="flex justify-between items-start mb-6">
+<span class="text-xl font-light text-gray-400 group-hover:text-accent transition duration-300 transform group-hover:-translate-y-2">04</span>
+<i class="fas fa-arrow-right transform -rotate-45 opacity-0 group-hover:opacity-100 group-hover:rotate-0 transition duration-500 text-xl relative z-10"></i>
+</div>
+<h3 class="text-3xl display-font mb-4">Editorial Production</h3>
+<p class="text-gray-600 font-light text-sm w-3/4">Full-scale art direction, casting, and styling for fashion editorial campaigns.</p>
+<!-- Hover Image Reveal -->
+<div class="absolute right-0 bottom-0 w-32 h-40 opacity-0 group-hover:opacity-100 transition duration-500 transform translate-y-8 group-hover:translate-y-0 z-[1]">
+<img alt="Editorial Production" class="w-full h-full object-cover rounded shadow-lg grayscale group-hover:grayscale-0 transition duration-500" src="assets/images/srv_editorial_prod.webp"/>
+</div>
+</div>
+<!-- Service 5 -->
+<div class="service-card group cursor-pointer border-b border-gray-300 pb-16 relative">
+<div class="flex justify-between items-start mb-6">
+<span class="text-xl font-light text-gray-400 group-hover:text-accent transition duration-300 transform group-hover:-translate-y-2">05</span>
+<i class="fas fa-arrow-right transform -rotate-45 opacity-0 group-hover:opacity-100 group-hover:rotate-0 transition duration-500 text-xl relative z-10"></i>
+</div>
+<h3 class="text-3xl display-font mb-4">Brand Collaborations</h3>
+<p class="text-gray-600 font-light text-sm w-3/4">Partnerships with lifestyle and luxury brands to create limited-edition capsule collections.</p>
+<!-- Hover Image Reveal -->
+<div class="absolute right-0 bottom-0 w-32 h-40 opacity-0 group-hover:opacity-100 transition duration-500 transform translate-y-8 group-hover:translate-y-0 z-[1]">
+<img alt="Brand Collaborations" class="w-full h-full object-cover rounded shadow-lg grayscale group-hover:grayscale-0 transition duration-500" src="assets/images/srv_brand.webp"/>
+</div>
+</div>
+<!-- Service 6 -->
+<div class="service-card group cursor-pointer border-b border-gray-300 pb-16 relative">
+<div class="flex justify-between items-start mb-6">
+<span class="text-xl font-light text-gray-400 group-hover:text-accent transition duration-300 transform group-hover:-translate-y-2">06</span>
+<i class="fas fa-arrow-right transform -rotate-45 opacity-0 group-hover:opacity-100 group-hover:rotate-0 transition duration-500 text-xl relative z-10"></i>
+</div>
+<h3 class="text-3xl display-font mb-4">Global Delivery</h3>
+<p class="text-gray-600 font-light text-sm w-3/4">Premium white-glove international shipping services for our high-net-worth clients worldwide.</p>
+<!-- Hover Image Reveal -->
+<div class="absolute right-0 bottom-0 w-32 h-40 opacity-0 group-hover:opacity-100 transition duration-500 transform translate-y-8 group-hover:translate-y-0 z-[1]">
+<img alt="Global Delivery" class="w-full h-full object-cover rounded shadow-lg grayscale group-hover:grayscale-0 transition duration-500" src="assets/images/srv_delivery.webp"/>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Pricing Section -->
+<section class="max-w-screen-xl mx-auto px-6 mb-32">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Standard Card -->
+        <div class="bg-white hover:-translate-y-4 hover:shadow-2xl shadow-md transition-all duration-500 flex flex-col group cursor-pointer" data-aos="fade-up" data-aos-delay="100">
+            <!-- Top Image & Price -->
+            <div class="relative h-56 w-full overflow-hidden">
+                <img src="assets/images/srv_consulting.webp" alt="Standard" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition duration-500"></div>
+                <div class="absolute inset-0 flex items-center justify-center text-white">
+                    <span class="text-2xl mt-4">$</span>
+                    <span class="text-7xl font-serif italic mx-2" style="font-family: 'Playfair Display', serif;">28</span>
+                    <span class="text-sm font-serif italic mt-6">/Monthly</span>
+                </div>
+            </div>
+            <!-- Plan Name -->
+            <div class="py-6 text-center border-b border-gray-200 bg-[#fafafa]">
+                <h3 class="text-lg font-bold tracking-widest uppercase">Standard</h3>
+            </div>
+            <!-- Features & Button -->
+            <div class="flex-grow flex flex-col items-center justify-between p-10 bg-[#fafafa]">
+                <ul class="text-center space-y-4 text-gray-400 font-light text-sm mb-10">
+                    <li>Commodo ligula eget dolor</li>
+                    <li>Aenean commodo ligula</li>
+                    <li>Etiam ultricies augue</li>
+                    <li>Leo eget bibendum sodales</li>
+                </ul>
+                <a href="store.html" class="border border-black px-10 py-3 text-sm font-serif italic text-black hover:bg-black hover:text-white transition-colors duration-300">read more</a>
+            </div>
+        </div>
+
+        <!-- Premium Card -->
+        <div class="bg-white hover:-translate-y-4 hover:shadow-2xl shadow-md transition-all duration-500 flex flex-col group cursor-pointer" data-aos="fade-up" data-aos-delay="200">
+            <!-- Top Image & Price -->
+            <div class="relative h-56 w-full overflow-hidden">
+                <img src="assets/images/srv_editorial.webp" alt="Premium" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition duration-500"></div>
+                <div class="absolute inset-0 flex items-center justify-center text-white">
+                    <span class="text-2xl mt-4">$</span>
+                    <span class="text-7xl font-serif italic mx-2" style="font-family: 'Playfair Display', serif;">52</span>
+                    <span class="text-sm font-serif italic mt-6">/Monthly</span>
+                </div>
+            </div>
+            <!-- Plan Name -->
+            <div class="py-6 text-center border-b border-gray-200 bg-[#fafafa]">
+                <h3 class="text-lg font-bold tracking-widest uppercase">Premium</h3>
+            </div>
+            <!-- Features & Button -->
+            <div class="flex-grow flex flex-col items-center justify-between p-10 bg-[#fafafa]">
+                <ul class="text-center space-y-4 text-gray-400 font-light text-sm mb-10">
+                    <li>Commodo ligula eget dolor</li>
+                    <li>Aenean commodo ligula</li>
+                    <li>Etiam ultricies augue</li>
+                    <li>Leo eget bibendum sodales</li>
+                </ul>
+                <a href="store.html" class="border border-black px-10 py-3 text-sm font-serif italic text-black hover:bg-black hover:text-white transition-colors duration-300">read more</a>
+            </div>
+        </div>
+
+        <!-- Gold Card -->
+        <div class="bg-white hover:-translate-y-4 hover:shadow-2xl shadow-md transition-all duration-500 flex flex-col group cursor-pointer" data-aos="fade-up" data-aos-delay="300">
+            <!-- Top Image & Price -->
+            <div class="relative h-56 w-full overflow-hidden">
+                <img src="assets/images/srv_fashionable.webp" alt="Gold" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition duration-500"></div>
+                <div class="absolute inset-0 flex items-center justify-center text-white">
+                    <span class="text-2xl mt-4">$</span>
+                    <span class="text-7xl font-serif italic mx-2" style="font-family: 'Playfair Display', serif;">78</span>
+                    <span class="text-sm font-serif italic mt-6">/Monthly</span>
+                </div>
+            </div>
+            <!-- Plan Name -->
+            <div class="py-6 text-center border-b border-gray-200 bg-[#fafafa]">
+                <h3 class="text-lg font-bold tracking-widest uppercase">Gold</h3>
+            </div>
+            <!-- Features & Button -->
+            <div class="flex-grow flex flex-col items-center justify-between p-10 bg-[#fafafa]">
+                <ul class="text-center space-y-4 text-gray-400 font-light text-sm mb-10">
+                    <li>Commodo ligula eget dolor</li>
+                    <li>Aenean commodo ligula</li>
+                    <li>Etiam ultricies augue</li>
+                    <li>Leo eget bibendum sodales</li>
+                </ul>
+                <a href="store.html" class="border border-black px-10 py-3 text-sm font-serif italic text-black hover:bg-black hover:text-white transition-colors duration-300">read more</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- Testimonials Section -->
+<section class="relative w-full py-32 mt-32 border-t border-gray-800">
+    <!-- Background Image -->
+    <img src="assets/images/srv_editorial.webp" class="absolute inset-0 w-full h-full object-cover grayscale" alt="Testimonials Background">
+    <div class="absolute inset-0 bg-black/85"></div> <!-- Dark Overlay -->
+    
+    <div class="relative z-10 max-w-4xl mx-auto px-4 md:px-12 text-center text-white">
+        <h5 class="font-serif italic text-sm text-gray-400 mb-2">Testimonials</h5>
+        <h2 class="text-4xl md:text-5xl font-bold uppercase tracking-wider mb-10">Our Models Say</h2>
+        
+        <!-- Swiper -->
+        <div class="swiper testimonial-swiper overflow-hidden relative px-4 md:px-16">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide cursor-grab active:cursor-grabbing">
+                    <p class="text-gray-200 leading-relaxed text-base md:text-lg font-light mb-8 max-w-2xl mx-auto">
+                        Aenean commodo ligula eget dolor. Aenean massa. Cum socis hwe menatoquep enatibus et magnis dis par. Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                    </p>
+                    <p class="font-serif tracking-wider">Aida Thusty</p>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide cursor-grab active:cursor-grabbing">
+                    <p class="text-gray-200 leading-relaxed text-base md:text-lg font-light mb-8 max-w-2xl mx-auto">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ula eget dolor. Aenean massa. Cum sociis Theme natoque penatibus et magnis dis par
+                    </p>
+                    <p class="font-serif tracking-wider">Estée Lauder</p>
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide cursor-grab active:cursor-grabbing">
+                    <p class="text-gray-200 leading-relaxed text-base md:text-lg font-light mb-8 max-w-2xl mx-auto">
+                        Aenean commodo ligula eget dolor. Aenean massa. Cum socis hwe menatoquep enatibus et magnis dis par. Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                    </p>
+                    <p class="font-serif tracking-wider">Aida Thusty</p>
+                </div>
+            </div>
+            <!-- Navigation Arrows (Custom styled thin arrows) -->
+            <div class="swiper-button-next !text-white after:!text-2xl font-light opacity-50 hover:opacity-100 transition-opacity !right-0 hidden md:flex"></div>
+            <div class="swiper-button-prev !text-white after:!text-2xl font-light opacity-50 hover:opacity-100 transition-opacity !left-0 hidden md:flex"></div>
+        </div>
+    </div>
+</section>
+<!-- Global Fashion Agency Locations -->
+<section class="py-24 px-6 md:px-12 max-w-screen-xl mx-auto text-center relative mb-12" data-aos="fade-up">
+    <div class="mb-16">
+        <p class="font-serif italic text-gray-500 mb-2">Our Locations</p>
+        <h2 class="text-3xl md:text-4xl display-font font-bold mb-4 uppercase tracking-wide">Global Fashion Agency</h2>
+        <p class="font-serif italic text-gray-500 max-w-2xl mx-auto">Curabitur placerat, tortor nec eleifend, justo urna ante</p>
+        <div class="w-16 h-[1px] bg-black mx-auto mt-6"></div>
+    </div>
+
+    <!-- Map Container -->
+    <div class="relative w-full max-w-5xl mx-auto aspect-[16/9] lg:aspect-[2/1] bg-no-repeat bg-center bg-contain" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg'); opacity: 0.9; filter: sepia(0.2) hue-rotate(10deg) saturate(0.8) opacity(0.8);">
+        
+        <!-- San Francisco -->
+        <div class="absolute flex flex-col items-center transform -translate-x-1/2 -translate-y-1/2" style="top: 45%; left: 18%;">
+            <i class="fas fa-map-marker-alt text-black text-xl md:text-2xl drop-shadow-md cursor-pointer hover:text-accent transition transform hover:scale-110"></i>
+            <span class="text-[9px] md:text-[11px] font-serif italic mt-1 font-bold whitespace-nowrap">San Francisco</span>
+        </div>
+
+        <!-- New York -->
+        <div class="absolute flex flex-col items-center transform -translate-x-1/2 -translate-y-1/2" style="top: 42%; left: 28%;">
+            <i class="fas fa-map-marker-alt text-black text-xl md:text-2xl drop-shadow-md cursor-pointer hover:text-accent transition transform hover:scale-110"></i>
+            <span class="text-[9px] md:text-[11px] font-serif italic mt-1 font-bold whitespace-nowrap">New York</span>
+        </div>
+
+        <!-- Peru -->
+        <div class="absolute flex flex-col items-center transform -translate-x-1/2 -translate-y-1/2" style="top: 68%; left: 30%;">
+            <i class="fas fa-map-marker-alt text-black text-xl md:text-2xl drop-shadow-md cursor-pointer hover:text-accent transition transform hover:scale-110"></i>
+            <span class="text-[9px] md:text-[11px] font-serif italic mt-1 font-bold whitespace-nowrap">Peru</span>
+        </div>
+
+        <!-- London -->
+        <div class="absolute flex flex-col items-center transform -translate-x-1/2 -translate-y-1/2" style="top: 35%; left: 47%;">
+            <i class="fas fa-map-marker-alt text-black text-xl md:text-2xl drop-shadow-md cursor-pointer hover:text-accent transition transform hover:scale-110"></i>
+            <span class="text-[9px] md:text-[11px] font-serif italic mt-1 font-bold whitespace-nowrap">London</span>
+        </div>
+
+        <!-- Kuwait -->
+        <div class="absolute flex flex-col items-center transform -translate-x-1/2 -translate-y-1/2" style="top: 50%; left: 58%;">
+            <i class="fas fa-map-marker-alt text-black text-xl md:text-2xl drop-shadow-md cursor-pointer hover:text-accent transition transform hover:scale-110"></i>
+            <span class="text-[9px] md:text-[11px] font-serif italic mt-1 font-bold whitespace-nowrap">Kuwait</span>
+        </div>
+
+        <!-- Moscow -->
+        <div class="absolute flex flex-col items-center transform -translate-x-1/2 -translate-y-1/2" style="top: 25%; left: 63%;">
+            <i class="fas fa-map-marker-alt text-black text-xl md:text-2xl drop-shadow-md cursor-pointer hover:text-accent transition transform hover:scale-110"></i>
+            <span class="text-[9px] md:text-[11px] font-serif italic mt-1 font-bold whitespace-nowrap">Moscow</span>
+        </div>
+
+        <!-- Beijing -->
+        <div class="absolute flex flex-col items-center transform -translate-x-1/2 -translate-y-1/2" style="top: 40%; left: 75%;">
+            <i class="fas fa-map-marker-alt text-black text-xl md:text-2xl drop-shadow-md cursor-pointer hover:text-accent transition transform hover:scale-110"></i>
+            <span class="text-[9px] md:text-[11px] font-serif italic mt-1 font-bold whitespace-nowrap">Beijing</span>
+        </div>
+
+        <!-- Sydney -->
+        <div class="absolute flex flex-col items-center transform -translate-x-1/2 -translate-y-1/2" style="top: 80%; left: 85%;">
+            <i class="fas fa-map-marker-alt text-black text-xl md:text-2xl drop-shadow-md cursor-pointer hover:text-accent transition transform hover:scale-110"></i>
+            <span class="text-[9px] md:text-[11px] font-serif italic mt-1 font-bold whitespace-nowrap">Sydney</span>
+        </div>
+    </div>
+</section>
+</main>
+<footer class="w-full mt-auto" id="footer-container"></footer>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="js/main.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        if(typeof Swiper !== 'undefined') {
+            new Swiper('.testimonial-swiper', {
+                loop: true,
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: false,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true
+                },
+                speed: 1000,
+            });
+        }
+    });
+</script>
+</body>
+</html>

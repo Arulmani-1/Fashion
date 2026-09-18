@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly - Client Dashboard</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { black: '#111111', offwhite: '#F6F5F2', softgray: '#E9E7E2', darkgray: '#444444', accent: '#7f2a4f' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Playfair Display', 'serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-offwhite text-black font-sans antialiased">
+    <div class="flex h-screen overflow-hidden">
+        
+        <!-- Sidebar -->
+        <aside id="sidebar" class="w-64 bg-white border-r border-gray-200 flex flex-col fixed inset-y-0 left-0 z-50 transform -translate-x-full md:relative md:translate-x-0 transition-transform duration-300 ease-in-out">
+            <div class="p-6 border-b border-gray-200 flex items-center justify-between">
+                <img src="assets/images/logo.webp" alt="Stackly" class="h-8 w-auto">
+                <button id="close-sidebar-btn" class="md:hidden text-gray-500 hover:text-black">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <nav class="flex-1 px-4 py-6 space-y-2 overflow-y-auto">
+                <a href="#" data-target="section-dashboard" class="flex items-center space-x-3 bg-accent text-white px-4 py-3 rounded-md font-medium text-sm transition sidebar-link">
+                    <i class="fas fa-home w-5"></i> <span>Dashboard</span>
+                </a>
+                <a href="#" data-target="section-orders" class="flex items-center space-x-3 text-gray-500 hover:bg-accent hover:text-white px-4 py-3 rounded-md font-medium text-sm transition sidebar-link">
+                    <i class="fas fa-shopping-bag w-5"></i> <span>My Orders</span>
+                </a>
+                <a href="#" data-target="section-wishlist" class="flex items-center space-x-3 text-gray-500 hover:bg-accent hover:text-white px-4 py-3 rounded-md font-medium text-sm transition sidebar-link">
+                    <i class="far fa-heart w-5"></i> <span>Wishlist</span>
+                </a>
+                <a href="#" data-target="section-account" class="flex items-center space-x-3 text-gray-500 hover:bg-accent hover:text-white px-4 py-3 rounded-md font-medium text-sm transition sidebar-link">
+                    <i class="far fa-user w-5"></i> <span>Account Settings</span>
+                </a>
+            </nav>
+            <div class="p-4 border-t border-gray-200">
+                <a href="login.html" class="flex items-center space-x-3 text-red-500 hover:bg-red-50 px-4 py-3 rounded-md font-medium text-sm transition">
+                    <i class="fas fa-sign-out-alt w-5"></i> <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 flex flex-col h-screen overflow-hidden relative">
+            
+            <!-- Navbar -->
+            <header class="bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between z-10 shadow-sm relative">
+                <div class="flex items-center md:hidden space-x-4">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-black focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                    <img src="assets/images/logo.webp" alt="Stackly" class="h-6 w-auto">
+                </div>
+                <div class="hidden md:block">
+                    <h1 class="text-xl font-serif font-medium">Welcome back, Client</h1>
+                </div>
+                
+                <!-- Email Display on Right Side -->
+                <div class="flex items-center space-x-4">
+                    <span id="user-email-display" class="text-sm font-medium text-gray-700 hidden sm:block">client@example.com</span>
+                </div>
+            </header>
+
+            <!-- Content Area -->
+            <div class="flex-1 overflow-y-auto p-6 md:p-10 bg-offwhite relative">
+                
+                <!-- Dashboard Section -->
+                <div id="section-dashboard" class="content-section">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                        <!-- Cards -->
+                        <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-gray-500 text-xs font-semibold uppercase tracking-wider">Total Orders</h3>
+                                <i class="fas fa-box text-gray-300"></i>
+                            </div>
+                            <p class="text-3xl font-light">12</p>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-gray-500 text-xs font-semibold uppercase tracking-wider">Wishlist Items</h3>
+                                <i class="far fa-heart text-gray-300"></i>
+                            </div>
+                            <p class="text-3xl font-light">5</p>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-gray-500 text-xs font-semibold uppercase tracking-wider">Store Credit</h3>
+                                <i class="fas fa-wallet text-gray-300"></i>
+                            </div>
+                            <p class="text-3xl font-light">$120.00</p>
+                        </div>
+                    </div>
+
+                    <!-- Recent Orders Table -->
+                    <div class="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
+                        <div class="px-6 py-5 border-b border-gray-200 flex items-center justify-between">
+                            <h3 class="text-lg font-medium">Recent Orders</h3>
+                            <a href="#" class="text-sm text-gray-500 hover:text-black border-b border-transparent hover:border-black transition">View All</a>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left text-sm whitespace-nowrap">
+                                <thead class="bg-gray-50 text-gray-500 border-b border-gray-200">
+                                    <tr>
+                                        <th class="px-6 py-4 font-medium uppercase text-[10px] tracking-wider">Order ID</th>
+                                        <th class="px-6 py-4 font-medium uppercase text-[10px] tracking-wider">Date</th>
+                                        <th class="px-6 py-4 font-medium uppercase text-[10px] tracking-wider">Total</th>
+                                        <th class="px-6 py-4 font-medium uppercase text-[10px] tracking-wider">Status</th>
+                                        <th class="px-6 py-4 font-medium uppercase text-[10px] tracking-wider text-right">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-100">
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-6 py-4 font-medium text-black">#ORD-5921</td>
+                                        <td class="px-6 py-4 text-gray-600">Sep 15, 2026</td>
+                                        <td class="px-6 py-4 font-medium text-black">$245.00</td>
+                                        <td class="px-6 py-4"><span class="px-2 py-1 bg-green-100 text-green-700 rounded text-[10px] font-bold uppercase tracking-wider">Delivered</span></td>
+                                        <td class="px-6 py-4 text-right"><button class="text-gray-400 hover:text-black transition"><i class="far fa-eye"></i></button></td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-6 py-4 font-medium text-black">#ORD-5890</td>
+                                        <td class="px-6 py-4 text-gray-600">Sep 02, 2026</td>
+                                        <td class="px-6 py-4 font-medium text-black">$85.50</td>
+                                        <td class="px-6 py-4"><span class="px-2 py-1 bg-green-100 text-green-700 rounded text-[10px] font-bold uppercase tracking-wider">Delivered</span></td>
+                                        <td class="px-6 py-4 text-right"><button class="text-gray-400 hover:text-black transition"><i class="far fa-eye"></i></button></td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-6 py-4 font-medium text-black">#ORD-5744</td>
+                                        <td class="px-6 py-4 text-gray-600">Aug 21, 2026</td>
+                                        <td class="px-6 py-4 font-medium text-black">$420.00</td>
+                                        <td class="px-6 py-4"><span class="px-2 py-1 bg-green-100 text-green-700 rounded text-[10px] font-bold uppercase tracking-wider">Delivered</span></td>
+                                        <td class="px-6 py-4 text-right"><button class="text-gray-400 hover:text-black transition"><i class="far fa-eye"></i></button></td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-6 py-4 font-medium text-black">#ORD-5612</td>
+                                        <td class="px-6 py-4 text-gray-600">Jul 11, 2026</td>
+                                        <td class="px-6 py-4 font-medium text-black">$120.00</td>
+                                        <td class="px-6 py-4"><span class="px-2 py-1 bg-gray-100 text-gray-600 rounded text-[10px] font-bold uppercase tracking-wider">Returned</span></td>
+                                        <td class="px-6 py-4 text-right"><button class="text-gray-400 hover:text-black transition"><i class="far fa-eye"></i></button></td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-6 py-4 font-medium text-black">#ORD-5501</td>
+                                        <td class="px-6 py-4 text-gray-600">Jun 30, 2026</td>
+                                        <td class="px-6 py-4 font-medium text-black">$89.99</td>
+                                        <td class="px-6 py-4"><span class="px-2 py-1 bg-green-100 text-green-700 rounded text-[10px] font-bold uppercase tracking-wider">Delivered</span></td>
+                                        <td class="px-6 py-4 text-right"><button class="text-gray-400 hover:text-black transition"><i class="far fa-eye"></i></button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- My Orders Section -->
+                <div id="section-orders" class="content-section hidden">
+                    <h2 class="text-2xl font-serif mb-6">My Orders</h2>
+                    <div class="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
+                        <div class="px-6 py-5 border-b border-gray-200 flex items-center justify-between">
+                            <h3 class="text-lg font-medium">Order History</h3>
+                            <div class="relative">
+                                <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 text-xs"></i>
+                                <input type="text" placeholder="Search orders..." class="pl-8 pr-4 py-2 border border-gray-300 rounded text-sm focus:border-black outline-none w-48 md:w-64">
+                            </div>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left text-sm whitespace-nowrap">
+                                <thead class="bg-gray-50 text-gray-500 border-b border-gray-200">
+                                    <tr>
+                                        <th class="px-6 py-4 font-medium uppercase text-[10px] tracking-wider">Order ID</th>
+                                        <th class="px-6 py-4 font-medium uppercase text-[10px] tracking-wider">Date</th>
+                                        <th class="px-6 py-4 font-medium uppercase text-[10px] tracking-wider">Items</th>
+                                        <th class="px-6 py-4 font-medium uppercase text-[10px] tracking-wider">Total</th>
+                                        <th class="px-6 py-4 font-medium uppercase text-[10px] tracking-wider">Status</th>
+                                        <th class="px-6 py-4 font-medium uppercase text-[10px] tracking-wider text-right">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-100">
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-6 py-4 font-medium text-black">#ORD-5921</td>
+                                        <td class="px-6 py-4 text-gray-600">Sep 15, 2026</td>
+                                        <td class="px-6 py-4 text-gray-600">3 Items</td>
+                                        <td class="px-6 py-4 font-medium text-black">$245.00</td>
+                                        <td class="px-6 py-4"><span class="px-2 py-1 bg-green-100 text-green-700 rounded text-[10px] font-bold uppercase tracking-wider">Delivered</span></td>
+                                        <td class="px-6 py-4 text-right"><button class="text-accent font-medium text-xs hover:underline">Track</button></td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-6 py-4 font-medium text-black">#ORD-5890</td>
+                                        <td class="px-6 py-4 text-gray-600">Sep 02, 2026</td>
+                                        <td class="px-6 py-4 text-gray-600">1 Item</td>
+                                        <td class="px-6 py-4 font-medium text-black">$85.50</td>
+                                        <td class="px-6 py-4"><span class="px-2 py-1 bg-green-100 text-green-700 rounded text-[10px] font-bold uppercase tracking-wider">Delivered</span></td>
+                                        <td class="px-6 py-4 text-right"><button class="text-gray-400 font-medium text-xs hover:text-black hover:underline">View Invoice</button></td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-6 py-4 font-medium text-black">#ORD-5744</td>
+                                        <td class="px-6 py-4 text-gray-600">Aug 21, 2026</td>
+                                        <td class="px-6 py-4 text-gray-600">5 Items</td>
+                                        <td class="px-6 py-4 font-medium text-black">$420.00</td>
+                                        <td class="px-6 py-4"><span class="px-2 py-1 bg-green-100 text-green-700 rounded text-[10px] font-bold uppercase tracking-wider">Delivered</span></td>
+                                        <td class="px-6 py-4 text-right"><button class="text-gray-400 font-medium text-xs hover:text-black hover:underline">View Invoice</button></td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-6 py-4 font-medium text-black">#ORD-5612</td>
+                                        <td class="px-6 py-4 text-gray-600">Jul 11, 2026</td>
+                                        <td class="px-6 py-4 text-gray-600">2 Items</td>
+                                        <td class="px-6 py-4 font-medium text-black">$120.00</td>
+                                        <td class="px-6 py-4"><span class="px-2 py-1 bg-gray-100 text-gray-600 rounded text-[10px] font-bold uppercase tracking-wider">Returned</span></td>
+                                        <td class="px-6 py-4 text-right"><button class="text-gray-400 font-medium text-xs hover:text-black hover:underline">View Invoice</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wishlist Section -->
+                <div id="section-wishlist" class="content-section hidden">
+                    <h2 class="text-2xl font-serif mb-6">Wishlist</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                        <!-- Product 1 -->
+                        <div class="bg-white border border-gray-200 rounded-lg overflow-hidden group">
+                            <div class="relative h-64 overflow-hidden bg-gray-100">
+                                <img src="assets/images/shop_look_prod_1.webp" alt="Wishlist Item" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                                <button class="absolute top-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center text-accent hover:bg-accent hover:text-white transition shadow">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="p-4">
+                                <p class="text-[10px] uppercase text-gray-500 font-semibold tracking-wider mb-1">Dresses</p>
+                                <h3 class="text-sm font-medium text-black mb-2 truncate">Floral Summer Dress</h3>
+                                <div class="flex items-center justify-between">
+                                    <p class="font-semibold text-sm">$89.99</p>
+                                    <button class="text-xs uppercase font-semibold text-black border-b border-black hover:text-accent hover:border-accent transition">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Product 2 -->
+                        <div class="bg-white border border-gray-200 rounded-lg overflow-hidden group">
+                            <div class="relative h-64 overflow-hidden bg-gray-100">
+                                <img src="assets/images/shop_look_prod_2.webp" alt="Wishlist Item" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                                <button class="absolute top-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center text-accent hover:bg-accent hover:text-white transition shadow">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="p-4">
+                                <p class="text-[10px] uppercase text-gray-500 font-semibold tracking-wider mb-1">Accessories</p>
+                                <h3 class="text-sm font-medium text-black mb-2 truncate">Leather Crossbody Bag</h3>
+                                <div class="flex items-center justify-between">
+                                    <p class="font-semibold text-sm">$120.00</p>
+                                    <button class="text-xs uppercase font-semibold text-black border-b border-black hover:text-accent hover:border-accent transition">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Product 3 -->
+                        <div class="bg-white border border-gray-200 rounded-lg overflow-hidden group">
+                            <div class="relative h-64 overflow-hidden bg-gray-100">
+                                <img src="assets/images/shop_look_prod_3.webp" alt="Wishlist Item" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                                <button class="absolute top-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center text-accent hover:bg-accent hover:text-white transition shadow">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="p-4">
+                                <p class="text-[10px] uppercase text-gray-500 font-semibold tracking-wider mb-1">Tops</p>
+                                <h3 class="text-sm font-medium text-black mb-2 truncate">Silk Wrap Blouse</h3>
+                                <div class="flex items-center justify-between">
+                                    <p class="font-semibold text-sm">$65.00</p>
+                                    <button class="text-xs uppercase font-semibold text-black border-b border-black hover:text-accent hover:border-accent transition">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Product 4 -->
+                        <div class="bg-white border border-gray-200 rounded-lg overflow-hidden group">
+                            <div class="relative h-64 overflow-hidden bg-gray-100">
+                                <img src="assets/images/shop_accessories.webp" alt="Wishlist Item" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                                <button class="absolute top-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center text-accent hover:bg-accent hover:text-white transition shadow">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="p-4">
+                                <p class="text-[10px] uppercase text-gray-500 font-semibold tracking-wider mb-1">Accessories</p>
+                                <h3 class="text-sm font-medium text-black mb-2 truncate">Classic Gold Necklace</h3>
+                                <div class="flex items-center justify-between">
+                                    <p class="font-semibold text-sm">$149.99</p>
+                                    <button class="text-xs uppercase font-semibold text-black border-b border-black hover:text-accent hover:border-accent transition">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Account Settings Section -->
+                <div id="section-account" class="content-section hidden">
+                    <h2 class="text-2xl font-serif mb-6">Account Settings</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="bg-white p-8 border border-gray-200 rounded-lg shadow-sm">
+                            <h3 class="font-medium text-lg mb-4 border-b pb-2">Profile Information</h3>
+                            <form class="space-y-4">
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-xs font-medium text-gray-700 mb-1">First Name</label>
+                                        <input type="text" class="w-full border border-gray-300 p-2 text-sm rounded focus:border-black outline-none" value="Stackly">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-medium text-gray-700 mb-1">Last Name</label>
+                                        <input type="text" class="w-full border border-gray-300 p-2 text-sm rounded focus:border-black outline-none" value="Client">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-medium text-gray-700 mb-1">Email Address</label>
+                                    <input type="email" class="w-full border border-gray-300 p-2 text-sm rounded focus:border-black outline-none" value="client@example.com">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-medium text-gray-700 mb-1">Phone Number</label>
+                                    <input type="text" class="w-full border border-gray-300 p-2 text-sm rounded focus:border-black outline-none" value="+1 (555) 123-4567">
+                                </div>
+                                <button type="button" class="bg-black text-white px-6 py-2 text-sm font-semibold uppercase mt-4 hover:bg-accent transition w-full">Update Profile</button>
+                            </form>
+                        </div>
+
+                        <div class="bg-white p-8 border border-gray-200 rounded-lg shadow-sm">
+                            <h3 class="font-medium text-lg mb-4 border-b pb-2">Change Password</h3>
+                            <form class="space-y-4">
+                                <div>
+                                    <label class="block text-xs font-medium text-gray-700 mb-1">Current Password</label>
+                                    <input type="password" class="w-full border border-gray-300 p-2 text-sm rounded focus:border-black outline-none" placeholder="••••••••">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-medium text-gray-700 mb-1">New Password</label>
+                                    <input type="password" class="w-full border border-gray-300 p-2 text-sm rounded focus:border-black outline-none" placeholder="Enter new password">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-medium text-gray-700 mb-1">Confirm New Password</label>
+                                    <input type="password" class="w-full border border-gray-300 p-2 text-sm rounded focus:border-black outline-none" placeholder="Confirm new password">
+                                </div>
+                                <button type="button" class="border border-black text-black px-6 py-2 text-sm font-semibold uppercase mt-4 hover:bg-black hover:text-white transition w-full">Change Password</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </main>
+    </div>
+
+    <!-- Script to set email and handle sidebar clicks -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set Email
+            const email = sessionStorage.getItem('stackly_user_email');
+            if(email) {
+                const displayElem = document.getElementById('user-email-display');
+                if(displayElem) {
+                    displayElem.textContent = email;
+                }
+            }
+
+            // Mobile Sidebar Toggle
+            const sidebar = document.getElementById('sidebar');
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const closeSidebarBtn = document.getElementById('close-sidebar-btn');
+
+            if (mobileMenuBtn && sidebar && closeSidebarBtn) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    sidebar.classList.remove('-translate-x-full');
+                });
+                closeSidebarBtn.addEventListener('click', () => {
+                    sidebar.classList.add('-translate-x-full');
+                });
+            }
+
+            // Handle Sidebar Clicks and Section Toggling
+            const sidebarLinks = document.querySelectorAll('.sidebar-link');
+            const sections = document.querySelectorAll('.content-section');
+            
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    
+                    // 1. Update active states for links
+                    sidebarLinks.forEach(l => {
+                        l.className = 'flex items-center space-x-3 text-gray-500 hover:bg-accent hover:text-white px-4 py-3 rounded-md font-medium text-sm transition sidebar-link';
+                    });
+                    link.className = 'flex items-center space-x-3 bg-accent text-white px-4 py-3 rounded-md font-medium text-sm transition sidebar-link';
+                    
+                    // 2. Hide all sections
+                    sections.forEach(sec => {
+                        sec.classList.add('hidden');
+                    });
+                    
+                    // 3. Show target section
+                    const targetId = link.getAttribute('data-target');
+                    if (targetId) {
+                        const targetSec = document.getElementById(targetId);
+                        if(targetSec) {
+                            targetSec.classList.remove('hidden');
+                            // Add a subtle fade-in animation using GSAP if available, else CSS
+                            targetSec.style.animation = 'fadeIn 0.3s ease forwards';
+                        }
+                    }
+
+                    // 4. Close sidebar on mobile after clicking
+                    if (window.innerWidth < 768 && sidebar) {
+                        sidebar.classList.add('-translate-x-full');
+                    }
+                });
+            });
+        });
+    </script>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</body>
+</html>

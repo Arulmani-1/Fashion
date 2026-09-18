@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly - Sign Up</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { black: '#111111', offwhite: '#F6F5F2', softgray: '#E9E7E2', darkgray: '#444444', accent: '#7f2a4f' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Playfair Display', 'serif'] }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-offwhite text-black antialiased overflow-hidden">
+    <div class="page-transition"></div>
+
+    <main class="flex h-screen w-full relative">
+        <!-- Left Image / Mobile Background -->
+        <div class="absolute inset-0 lg:static lg:flex lg:w-1/2 relative bg-black items-center justify-center overflow-hidden z-0">
+            <img alt="Signup Banner" class="absolute inset-0 w-full h-full object-cover opacity-60 lg:opacity-80" src="assets/images/signup_banner.webp"/>
+            <div class="relative z-10 text-white text-center hidden lg:block">
+                <h1 class="text-6xl display-font mb-4">Join Stackly</h1>
+                <p class="font-light tracking-widest uppercase text-sm">Become part of our curated world.</p>
+            </div>
+            <!-- Back to home overlay link -->
+            <a class="absolute top-8 left-8 text-white uppercase text-xs tracking-widest font-semibold hover:text-accent transition z-20" href="index.html">
+                <i class="fas fa-arrow-left mr-2"></i> Back to Home
+            </a>
+        </div>
+
+        <!-- Right Form -->
+        <div class="w-full lg:w-1/2 relative z-10 flex items-center justify-center p-8 bg-white/85 lg:bg-offwhite backdrop-blur-md lg:backdrop-blur-none overflow-y-auto h-screen shadow-xl lg:shadow-none">
+            <div class="w-full max-w-md stagger-form my-auto pb-10 pt-10">
+                <div class="text-center mb-10 flex justify-center">
+                    <a href="index.html" class="inline-block hover:opacity-75 transition-opacity">
+                        <img src="assets/images/logo.webp" alt="Stackly Logo" class="h-8 md:h-10 w-auto object-contain">
+                    </a>
+                </div>
+                
+                <h2 class="text-3xl display-font mb-2">Create Account</h2>
+                <p class="text-gray-500 font-light text-sm mb-8">Join the Stackly community.</p>
+
+                <form id="signupForm" class="space-y-5" onsubmit="event.preventDefault(); validateSignup();">
+                    <!-- Role Selection -->
+                    <div class="flex items-center space-x-6 py-2">
+                        <label class="flex items-center text-gray-700 cursor-pointer font-medium text-sm">
+                            <input type="radio" name="role" value="client" checked class="mr-2 accent-[#7f2a4f] w-4 h-4">
+                            Client
+                        </label>
+                        <label class="flex items-center text-gray-700 cursor-pointer font-medium text-sm">
+                            <input type="radio" name="role" value="admin" class="mr-2 accent-[#7f2a4f] w-4 h-4">
+                            Admin
+                        </label>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <input type="text" id="fname" placeholder="First Name" class="form-control" required>
+                            <span class="error-msg text-xs text-red-500 mt-1 hidden">Required</span>
+                        </div>
+                        <div>
+                            <input type="text" id="lname" placeholder="Last Name" class="form-control" required>
+                            <span class="error-msg text-xs text-red-500 mt-1 hidden">Required</span>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <input type="email" id="email" placeholder="Email Address" class="form-control" required>
+                        <span class="error-msg text-xs text-red-500 mt-1 hidden">Valid email required</span>
+                    </div>
+                    
+
+                    <div>
+                        <input type="password" id="password" placeholder="Password (Min. 8 characters)" class="form-control" required minlength="8">
+                        <span class="error-msg text-xs text-red-500 mt-1 hidden">Min 8 chars</span>
+                    </div>
+                    
+                    <div>
+                        <input type="password" id="confirmPassword" placeholder="Confirm Password" class="form-control" required>
+                        <span class="error-msg text-xs text-red-500 mt-1 hidden">Passwords do not match</span>
+                    </div>
+
+                    <div class="flex items-start mt-2">
+                        <input type="checkbox" id="terms" class="mt-1 mr-3 accent-black" required>
+                        <label for="terms" class="text-xs text-gray-600 leading-relaxed">
+                            I agree to the <a href="#" class="text-black border-b border-black">Terms & Conditions</a> and <a href="#" class="text-black border-b border-black">Privacy Policy</a>.
+                        </label>
+                    </div>
+                    <span id="termsError" class="error-msg text-xs text-red-500 hidden">You must agree to terms</span>
+
+                    <button type="submit" class="btn-stackly w-full py-4 mt-2 uppercase font-semibold tracking-widest text-sm">Create Account</button>
+                </form>
+
+                <div class="mt-8">
+                    <div class="relative flex py-5 items-center">
+                        <div class="flex-grow border-t border-gray-300"></div>
+                        <span class="flex-shrink-0 mx-4 text-gray-400 text-sm">or sign up with</span>
+                        <div class="flex-grow border-t border-gray-300"></div>
+                    </div>
+                    <div class="flex space-x-4">
+                        <button class="flex-1 py-3 border border-gray-300 hover:border-black transition flex items-center justify-center text-sm font-semibold">
+                            <i class="fab fa-google mr-2"></i> Google
+                        </button>
+                        <button class="flex-1 py-3 border border-gray-300 hover:border-black transition flex items-center justify-center text-sm font-semibold">
+                            <i class="fab fa-apple mr-2 text-lg"></i> Apple
+                        </button>
+                    </div>
+                </div>
+
+                <p class="text-center mt-8 text-sm text-gray-600">
+                    Already have an account? <a href="login.html" class="text-black font-semibold uppercase tracking-wide border-b border-black">Login</a>
+                </p>
+            </div>
+        </div>
+    </main>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            gsap.from('.stagger-form > *', {
+                y: 20, opacity: 0, duration: 0.5, stagger: 0.05, ease: 'power2.out', delay: 0.2
+            });
+        });
+
+        function validateSignup() {
+            const pass = document.getElementById('password');
+            const conf = document.getElementById('confirmPassword');
+            const terms = document.getElementById('terms');
+            let valid = true;
+
+            document.querySelectorAll('.error-msg').forEach(el => el.classList.add('hidden'));
+
+            if (pass.value !== conf.value) {
+                const confError = conf.nextElementSibling;
+                confError.classList.remove('hidden');
+                gsap.fromTo(confError, {opacity:0, y:-5}, {opacity:1, y:0, duration:0.3});
+                valid = false;
+            }
+
+            if (!terms.checked) {
+                const termsErr = document.getElementById('termsError');
+                termsErr.classList.remove('hidden');
+                gsap.fromTo(termsErr, {opacity:0, y:-5}, {opacity:1, y:0, duration:0.3});
+                valid = false;
+            }
+
+            if (valid) {
+                const form = document.getElementById('signupForm');
+                gsap.to(form, {opacity: 0.5, duration: 0.3});
+                setTimeout(() => alert('Registration Successful'), 300);
+            }
+        }
+    </script>
+</body>
+</html>

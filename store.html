@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly - Store</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { black: '#111111', offwhite: '#F6F5F2', softgray: '#E9E7E2', darkgray: '#444444', accent: '#7f2a4f' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Playfair Display', 'serif'] }
+                }
+            }
+        }
+    </script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-offwhite text-black antialiased">
+    <div class="page-transition"></div>
+    <header id="navbar-container" class="w-full transition-all duration-300"></header>
+
+    <main>
+        <section class="pt-32 pb-16 px-6 max-w-screen-xl mx-auto text-center">
+            <h1 class="text-5xl md:text-7xl display-font mb-6">Store</h1>
+            <p class="text-lg text-gray-600 font-light">Browse our exclusive collections.</p>
+        </section>
+
+        <section class="px-6 md:px-12 max-w-screen-2xl mx-auto mb-24 flex flex-col lg:flex-row gap-12">
+            <!-- Sidebar Filters -->
+            <aside class="w-full lg:w-1/4">
+                <div class="mb-8 border-b border-gray-200 pb-6">
+                    <h3 class="text-sm uppercase tracking-widest font-bold mb-4">Categories</h3>
+                    <ul class="space-y-3 text-sm text-gray-500 font-light">
+                        <li><a href="#" class="hover:text-black transition">New Arrivals (24)</a></li>
+                        <li><a href="#" class="hover:text-black transition">Dresses (18)</a></li>
+                        <li><a href="#" class="hover:text-black transition text-black font-medium">Outerwear (12)</a></li>
+                        <li><a href="#" class="hover:text-black transition">Tops (32)</a></li>
+                        <li><a href="#" class="hover:text-black transition">Accessories (9)</a></li>
+                    </ul>
+                </div>
+                
+                <div class="mb-8 border-b border-gray-200 pb-6">
+                    <h3 class="text-sm uppercase tracking-widest font-bold mb-4">Price</h3>
+                    <ul class="space-y-3 text-sm text-gray-500 font-light">
+                        <li><a href="#" class="hover:text-black transition">$0 - $100</a></li>
+                        <li><a href="#" class="hover:text-black transition">$100 - $300</a></li>
+                        <li><a href="#" class="hover:text-black transition">$300 - $500</a></li>
+                        <li><a href="#" class="hover:text-black transition">$500+</a></li>
+                    </ul>
+                </div>
+                
+                <div class="mb-8">
+                    <h3 class="text-sm uppercase tracking-widest font-bold mb-4">Size</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <button class="w-10 h-10 border border-gray-200 text-xs hover:border-black transition">XS</button>
+                        <button class="w-10 h-10 border border-black text-xs font-bold transition">S</button>
+                        <button class="w-10 h-10 border border-gray-200 text-xs hover:border-black transition">M</button>
+                        <button class="w-10 h-10 border border-gray-200 text-xs hover:border-black transition">L</button>
+                        <button class="w-10 h-10 border border-gray-200 text-xs hover:border-black transition">XL</button>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Product Grid -->
+            <div class="w-full lg:w-3/4">
+                <div class="flex justify-between items-center mb-8 pb-4 border-b border-gray-200">
+                    <p class="text-sm text-gray-500">Showing 1–6 of 12 results</p>
+                    <select class="border-none bg-transparent text-sm focus:outline-none cursor-pointer uppercase tracking-widest">
+                        <option>Default Sorting</option>
+                        <option>Sort by Popularity</option>
+                        <option>Sort by Newness</option>
+                        <option>Sort by Price: Low to High</option>
+                    </select>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                    <!-- Product 1 -->
+                    <div class="group relative" data-aos="fade-up" data-aos-delay="100">
+                        <div class="relative overflow-hidden bg-gray-100 aspect-[3/4] mb-4">
+                            <img src="assets/images/img_d0621baf.webp" alt="Wool Scarf" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                            <div class="absolute bottom-0 left-0 w-full p-4 translate-y-full group-hover:translate-y-0 transition duration-500 flex gap-2">
+                                <a href="view_cart.html" class="flex-1 bg-white text-black text-center py-3 text-xs uppercase tracking-widest hover:bg-black hover:text-white transition">Add to Cart</a>
+                                <button class="w-12 bg-white text-black flex items-center justify-center hover:bg-black hover:text-white transition"><i class="far fa-heart"></i></button>
+                            </div>
+                        </div>
+                        <h3 class="text-sm font-medium mb-1">Wool Scarf</h3>
+                        <p class="text-gray-500 text-sm">$85.00</p>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="group relative" data-aos="fade-up" data-aos-delay="200">
+                        <div class="relative overflow-hidden bg-gray-100 aspect-[3/4] mb-4">
+                            <div class="absolute top-4 left-4 z-10 bg-black text-white text-[10px] uppercase tracking-widest px-2 py-1">Sale</div>
+                            <img src="assets/images/img_d62326e2.webp" alt="Leather Jacket" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                            <div class="absolute bottom-0 left-0 w-full p-4 translate-y-full group-hover:translate-y-0 transition duration-500 flex gap-2">
+                                <a href="view_cart.html" class="flex-1 bg-white text-black text-center py-3 text-xs uppercase tracking-widest hover:bg-black hover:text-white transition">Add to Cart</a>
+                                <button class="w-12 bg-white text-black flex items-center justify-center hover:bg-black hover:text-white transition"><i class="far fa-heart"></i></button>
+                            </div>
+                        </div>
+                        <h3 class="text-sm font-medium mb-1">Leather Jacket</h3>
+                        <p class="text-sm"><span class="text-gray-400 line-through mr-2">$650.00</span><span class="text-accent">$490.00</span></p>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="group relative" data-aos="fade-up" data-aos-delay="300">
+                        <div class="relative overflow-hidden bg-gray-100 aspect-[3/4] mb-4">
+                            <img src="assets/images/img_d81a4620.webp" alt="Denim Jeans" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                            <div class="absolute bottom-0 left-0 w-full p-4 translate-y-full group-hover:translate-y-0 transition duration-500 flex gap-2">
+                                <a href="view_cart.html" class="flex-1 bg-white text-black text-center py-3 text-xs uppercase tracking-widest hover:bg-black hover:text-white transition">Add to Cart</a>
+                                <button class="w-12 bg-white text-black flex items-center justify-center hover:bg-black hover:text-white transition"><i class="far fa-heart"></i></button>
+                            </div>
+                        </div>
+                        <h3 class="text-sm font-medium mb-1">Denim Jeans</h3>
+                        <p class="text-gray-500 text-sm">$120.00</p>
+                    </div>
+                    
+                    <!-- Product 4 -->
+                    <div class="group relative" data-aos="fade-up" data-aos-delay="100">
+                        <div class="relative overflow-hidden bg-gray-100 aspect-[3/4] mb-4">
+                            <img src="assets/images/img_e5c85b80.webp" alt="Silk Blouse" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                            <div class="absolute bottom-0 left-0 w-full p-4 translate-y-full group-hover:translate-y-0 transition duration-500 flex gap-2">
+                                <a href="view_cart.html" class="flex-1 bg-white text-black text-center py-3 text-xs uppercase tracking-widest hover:bg-black hover:text-white transition">Add to Cart</a>
+                                <button class="w-12 bg-white text-black flex items-center justify-center hover:bg-black hover:text-white transition"><i class="far fa-heart"></i></button>
+                            </div>
+                        </div>
+                        <h3 class="text-sm font-medium mb-1">Silk Blouse</h3>
+                        <p class="text-gray-500 text-sm">$165.00</p>
+                    </div>
+
+                    <!-- Product 5 -->
+                    <div class="group relative" data-aos="fade-up" data-aos-delay="200">
+                        <div class="relative overflow-hidden bg-gray-100 aspect-[3/4] mb-4">
+                            <img src="assets/images/img_e706897a.webp" alt="Cotton T-Shirt" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                            <div class="absolute bottom-0 left-0 w-full p-4 translate-y-full group-hover:translate-y-0 transition duration-500 flex gap-2">
+                                <a href="view_cart.html" class="flex-1 bg-white text-black text-center py-3 text-xs uppercase tracking-widest hover:bg-black hover:text-white transition">Add to Cart</a>
+                                <button class="w-12 bg-white text-black flex items-center justify-center hover:bg-black hover:text-white transition"><i class="far fa-heart"></i></button>
+                            </div>
+                        </div>
+                        <h3 class="text-sm font-medium mb-1">Cotton T-Shirt</h3>
+                        <p class="text-gray-500 text-sm">$45.00</p>
+                    </div>
+
+                    <!-- Product 6 -->
+                    <div class="group relative" data-aos="fade-up" data-aos-delay="300">
+                        <div class="relative overflow-hidden bg-gray-100 aspect-[3/4] mb-4">
+                            <img src="assets/images/img_e7c3657d.webp" alt="Summer Dress" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                            <div class="absolute bottom-0 left-0 w-full p-4 translate-y-full group-hover:translate-y-0 transition duration-500 flex gap-2">
+                                <a href="view_cart.html" class="flex-1 bg-white text-black text-center py-3 text-xs uppercase tracking-widest hover:bg-black hover:text-white transition">Add to Cart</a>
+                                <button class="w-12 bg-white text-black flex items-center justify-center hover:bg-black hover:text-white transition"><i class="far fa-heart"></i></button>
+                            </div>
+                        </div>
+                        <h3 class="text-sm font-medium mb-1">Summer Dress</h3>
+                        <p class="text-gray-500 text-sm">$210.00</p>
+                    </div>
+
+                    <!-- Product 7 -->
+                    <div class="group relative" data-aos="fade-up" data-aos-delay="100">
+                        <div class="relative overflow-hidden bg-gray-100 aspect-[3/4] mb-4">
+                            <img src="assets/images/img_f0a31b31.webp" alt="Classic Handbag" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                            <div class="absolute bottom-0 left-0 w-full p-4 translate-y-full group-hover:translate-y-0 transition duration-500 flex gap-2">
+                                <a href="view_cart.html" class="flex-1 bg-white text-black text-center py-3 text-xs uppercase tracking-widest hover:bg-black hover:text-white transition">Add to Cart</a>
+                                <button class="w-12 bg-white text-black flex items-center justify-center hover:bg-black hover:text-white transition"><i class="far fa-heart"></i></button>
+                            </div>
+                        </div>
+                        <h3 class="text-sm font-medium mb-1">Classic Handbag</h3>
+                        <p class="text-gray-500 text-sm">$320.00</p>
+                    </div>
+
+                    <!-- Product 8 -->
+                    <div class="group relative" data-aos="fade-up" data-aos-delay="200">
+                        <div class="relative overflow-hidden bg-gray-100 aspect-[3/4] mb-4">
+                            <div class="absolute top-4 left-4 z-10 bg-black text-white text-[10px] uppercase tracking-widest px-2 py-1">New</div>
+                            <img src="assets/images/img_fbd8946b.webp" alt="Ankle Boots" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                            <div class="absolute bottom-0 left-0 w-full p-4 translate-y-full group-hover:translate-y-0 transition duration-500 flex gap-2">
+                                <a href="view_cart.html" class="flex-1 bg-white text-black text-center py-3 text-xs uppercase tracking-widest hover:bg-black hover:text-white transition">Add to Cart</a>
+                                <button class="w-12 bg-white text-black flex items-center justify-center hover:bg-black hover:text-white transition"><i class="far fa-heart"></i></button>
+                            </div>
+                        </div>
+                        <h3 class="text-sm font-medium mb-1">Ankle Boots</h3>
+                        <p class="text-gray-500 text-sm">$280.00</p>
+                    </div>
+
+                    <!-- Product 9 -->
+                    <div class="group relative" data-aos="fade-up" data-aos-delay="300">
+                        <div class="relative overflow-hidden bg-gray-100 aspect-[3/4] mb-4">
+                            <img src="assets/images/img_ffd22042.webp" alt="Gold Necklace" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                            <div class="absolute bottom-0 left-0 w-full p-4 translate-y-full group-hover:translate-y-0 transition duration-500 flex gap-2">
+                                <a href="view_cart.html" class="flex-1 bg-white text-black text-center py-3 text-xs uppercase tracking-widest hover:bg-black hover:text-white transition">Add to Cart</a>
+                                <button class="w-12 bg-white text-black flex items-center justify-center hover:bg-black hover:text-white transition"><i class="far fa-heart"></i></button>
+                            </div>
+                        </div>
+                        <h3 class="text-sm font-medium mb-1">Gold Necklace</h3>
+                        <p class="text-gray-500 text-sm">$150.00</p>
+                    </div>
+
+                </div>
+                
+                <!-- Pagination -->
+                <div class="mt-16 flex justify-center space-x-2">
+                    <span class="w-10 h-10 flex items-center justify-center border border-black bg-black text-white text-sm">1</span>
+                    <a href="#" class="w-10 h-10 flex items-center justify-center border border-gray-200 text-gray-500 hover:border-black hover:text-black transition text-sm">2</a>
+                    <a href="#" class="w-10 h-10 flex items-center justify-center border border-gray-200 text-gray-500 hover:border-black hover:text-black transition text-sm"><i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer-container" class="w-full mt-auto"></footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stackly - Premium Fashion</title>
+<meta content="Contemporary fashion curated for the modern generation. Stackly premium collections." name="description"/>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        black: '#111111',
+                        offwhite: '#F6F5F2',
+                        softgray: '#E9E7E2',
+                        darkgray: '#444444',
+                        accent: '#7f2a4f'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+<!-- AOS CSS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<!-- Custom CSS -->
+<link href="css/style.css" rel="stylesheet"/>
+</head>
+<body class="bg-offwhite text-black antialiased">
+<!-- Page Transition Overlay -->
+<div class="page-transition"></div>
+<!-- Header / Navbar Container -->
+<header class="w-full transition-all duration-300" id="navbar-container"></header>
+<main>
+<!-- Hero Section -->
+<section class="relative w-full h-[80vh] min-h-[600px] overflow-hidden">
+    <!-- Background Slider -->
+    <div class="swiper hero-swiper absolute inset-0 w-full h-full z-0">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="assets/images/hero_wide.webp" class="w-full h-full object-cover object-top" alt="Slide 1">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/images/hero_slide_2.webp" class="w-full h-full object-cover object-center" alt="Slide 2">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/images/hero_slide_3.webp" class="w-full h-full object-cover object-center" alt="Slide 3">
+            </div>
+        </div>
+        <div class="absolute inset-0 bg-black bg-opacity-30 z-10 pointer-events-none"></div>
+    </div>
+    
+    <!-- Hero Content overlay -->
+    <div class="relative z-20 flex flex-col items-center justify-center h-full px-6 max-w-4xl mx-auto text-center text-white drop-shadow-2xl">
+        <h1 class="text-5xl md:text-7xl lg:text-8xl font-normal display-font mb-6" style="text-shadow: 0 4px 10px rgba(0,0,0,0.5);">Style is an Attitude</h1>
+        <p class="text-lg md:text-xl font-light mb-10 max-w-2xl mx-auto" style="text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Contemporary fashion curated for the modern generation.</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a class="hero-btn btn-stackly bg-white text-black border-white hover:bg-black hover:text-white" href="store.html">Shop Collection</a>
+            <a class="hero-btn btn-stackly border-white text-white bg-transparent hover:bg-white hover:text-black shadow-lg" href="blog.html">Explore Lookbook</a>
+        </div>
+    </div>
+</section>
+<!-- Announcement Bar / Marquee -->
+<div class="marquee-container border-b border-t border-gray-200">
+<div class="marquee-content uppercase font-semibold">
+<span class="mx-8">• NEW SEASON</span>
+<span class="mx-8">• FREE SHIPPING ON ORDERS OVER $200</span>
+<span class="mx-8">• PREMIUM COLLECTION</span>
+<span class="mx-8">• LIMITED EDITION DROPS</span>
+</div>
+</div>
+<!-- Shop by categories -->
+<section class="py-16 md:py-24 px-6 md:px-12 max-w-screen-2xl mx-auto">
+    <!-- Category Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 stagger-cards">
+        
+        <!-- Women (Left Column) -->
+        <div class="relative bg-[#f4f4f4] overflow-hidden group min-h-[550px] md:min-h-[700px] flex items-center rounded-sm">
+            <!-- Background Image -->
+            <img src="assets/images/grid_women.webp" alt="Women" class="absolute inset-0 w-full h-full object-cover object-[70%_center] group-hover:scale-105 transition-transform duration-700">
+            
+            <!-- Content overlay on left side -->
+            <div class="relative z-10 p-8 md:p-14 w-full sm:w-2/3 lg:w-3/5">
+                <span class="text-xs font-semibold mb-3 block text-gray-500"><span class="font-bold text-black">54</span> products</span>
+                <h3 class="text-4xl md:text-5xl font-normal mb-6">Women</h3>
+                <p class="text-gray-600 mb-8 text-sm leading-relaxed">
+                    Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                </p>
+                <ul class="space-y-3.5 text-sm font-medium text-gray-800">
+                    <li><a href="store.html" class="hover:text-accent transition">Blazers</a></li>
+                    <li><a href="store.html" class="hover:text-accent transition">Blouses & shirts</a></li>
+                    <li><a href="store.html" class="hover:text-accent transition">Dresses</a></li>
+                    <li><a href="store.html" class="hover:text-accent transition">Jackets & coats</a></li>
+                    <li><a href="store.html" class="hover:text-accent transition">Jeans</a></li>
+                    <li><a href="store.html" class="hover:text-accent transition">Knit</a></li>
+                    <li><a href="store.html" class="hover:text-accent transition">Pants</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Right Column (Men + Shoes & Accessories) -->
+        <div class="flex flex-col gap-6">
+            
+            <!-- Men (Top Half) -->
+            <div class="relative bg-[#f4f4f4] overflow-hidden group flex-1 min-h-[300px] md:min-h-[340px] rounded-sm">
+                <img src="assets/images/grid_men.webp" alt="Men" class="absolute inset-0 w-full h-full object-cover object-right group-hover:scale-105 transition-transform duration-700">
+                
+                <div class="relative z-10 p-8 md:p-10 w-full sm:w-1/2">
+                    <span class="text-xs font-semibold mb-3 block text-gray-500"><span class="font-bold text-black">23</span> products</span>
+                    <h3 class="text-3xl font-normal mb-8">Men</h3>
+                    <ul class="space-y-3.5 text-sm font-medium text-gray-800">
+                        <li><a href="store.html" class="hover:text-accent transition">Pants</a></li>
+                        <li><a href="store.html" class="hover:text-accent transition">Shirts</a></li>
+                        <li><a href="store.html" class="hover:text-accent transition">Shorts</a></li>
+                        <li><a href="store.html" class="hover:text-accent transition">Sweatshirts & Hoodies</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Half (Shoes & Accessories) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 flex-1">
+                
+                <!-- Shoes -->
+                <div class="relative bg-[#e9e3de] overflow-hidden group min-h-[250px] rounded-sm">
+                    <img src="assets/images/grid_shoes.webp" alt="Shoes" class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
+                    <div class="relative z-10 p-8">
+                        <span class="text-xs font-semibold mb-2 block text-gray-500"><span class="font-bold text-black">1</span> product</span>
+                        <h3 class="text-2xl font-normal text-black">Shoes</h3>
+                    </div>
+                </div>
+
+                <!-- Accessories -->
+                <div class="relative bg-[#dfe1e3] overflow-hidden group min-h-[250px] rounded-sm">
+                    <img src="assets/images/grid_accessories.webp" alt="Accessories" class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
+                    <div class="relative z-10 p-8">
+                        <span class="text-xs font-semibold mb-2 block text-gray-500"><span class="font-bold text-black">3</span> products</span>
+                        <h3 class="text-2xl font-normal text-black">Accessories</h3>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Benefits Row -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+        <!-- Benefit 1 -->
+        <div class="border border-gray-200 p-8 flex flex-col items-center justify-center hover:shadow-md bg-white rounded-sm transition duration-300 cursor-pointer">
+            <i class="fas fa-cube text-xl mb-4 text-gray-800"></i>
+            <h4 class="text-[11px] font-semibold uppercase tracking-wide mb-2">Free Shipping</h4>
+            <p class="text-[9px] text-gray-500">Free shipping over order $120</p>
+        </div>
+        <!-- Benefit 2 -->
+        <div class="border border-gray-200 p-8 flex flex-col items-center justify-center hover:shadow-md bg-white rounded-sm transition duration-300 cursor-pointer">
+            <i class="far fa-credit-card text-xl mb-4 text-gray-800"></i>
+            <h4 class="text-[11px] font-semibold uppercase tracking-wide mb-2">Flexible Payment</h4>
+            <p class="text-[9px] text-gray-500">Pay with Multiple Credit Cards</p>
+        </div>
+        <!-- Benefit 3 -->
+        <div class="border border-gray-200 p-8 flex flex-col items-center justify-center hover:shadow-md bg-white rounded-sm transition duration-300 cursor-pointer">
+            <i class="fas fa-undo-alt text-xl mb-4 text-gray-800"></i>
+            <h4 class="text-[11px] font-semibold uppercase tracking-wide mb-2">14 Day Returns</h4>
+            <p class="text-[9px] text-gray-500">Within 30 days for an exchange</p>
+        </div>
+        <!-- Benefit 4 -->
+        <div class="border border-gray-200 p-8 flex flex-col items-center justify-center hover:shadow-md bg-white rounded-sm transition duration-300 cursor-pointer">
+            <i class="fas fa-headset text-xl mb-4 text-gray-800"></i>
+            <h4 class="text-[11px] font-semibold uppercase tracking-wide mb-2">Premium Support</h4>
+            <p class="text-[9px] text-gray-500">Outstanding premium support</p>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Categories -->
+<section class="pb-24 px-6 md:px-12 max-w-screen-2xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 stagger-cards">
+<!-- Women -->
+<a class="group block relative h-[600px] overflow-hidden img-hover-zoom" href="store.html">
+<img alt="Women" class="w-full h-full object-cover" src="assets/images/img_d936405c.webp"/>
+<div class="absolute inset-0 bg-black bg-opacity-10 group-hover:bg-opacity-30 transition duration-500"></div>
+<div class="absolute bottom-8 left-8 flex items-center justify-between w-[calc(100%-4rem)]">
+<h3 class="text-3xl text-white display-font transform group-hover:-translate-y-2 transition duration-500">Women</h3>
+<i class="fas fa-arrow-right text-white transform opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition duration-500"></i>
+</div>
+</a>
+<!-- Men -->
+<a class="group block relative h-[600px] overflow-hidden img-hover-zoom" href="store.html">
+<img alt="Men" class="w-full h-full object-cover" src="assets/images/img_07614e6e.webp"/>
+<div class="absolute inset-0 bg-black bg-opacity-10 group-hover:bg-opacity-30 transition duration-500"></div>
+<div class="absolute bottom-8 left-8 flex items-center justify-between w-[calc(100%-4rem)]">
+<h3 class="text-3xl text-white display-font transform group-hover:-translate-y-2 transition duration-500">Men</h3>
+<i class="fas fa-arrow-right text-white transform opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition duration-500"></i>
+</div>
+</a>
+<!-- Accessories -->
+<a class="group block relative h-[600px] overflow-hidden img-hover-zoom lg:col-span-2" href="store.html">
+<img alt="Accessories" class="w-full h-full object-cover" src="assets/images/img_42acba5a.webp"/>
+<div class="absolute inset-0 bg-black bg-opacity-10 group-hover:bg-opacity-30 transition duration-500"></div>
+<div class="absolute bottom-8 left-8 flex items-center justify-between w-[calc(100%-4rem)]">
+<h3 class="text-3xl text-white display-font transform group-hover:-translate-y-2 transition duration-500">Accessories</h3>
+<i class="fas fa-arrow-right text-white transform opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition duration-500"></i>
+</div>
+</a>
+</div>
+</section>
+
+<!-- Spring Collections -->
+<section class="py-16 md:py-24 bg-white">
+    <div class="max-w-screen-2xl mx-auto px-6 md:px-12">
+        <div class="flex flex-col md:flex-row items-center gap-12 lg:gap-24">
+            <!-- Image Left -->
+            <div class="w-full md:w-1/2" data-aos="fade-right">
+                <img src="assets/images/spring_collection.webp" alt="Spring Collections" class="w-full h-auto object-cover rounded-sm shadow-sm aspect-[4/3] md:aspect-auto">
+            </div>
+            <!-- Text Right -->
+            <div class="w-full md:w-1/2 flex flex-col items-center justify-center text-center" data-aos="fade-left">
+                <span class="text-[10px] md:text-xs font-semibold tracking-[0.2em] uppercase mb-4 block text-black">Get your fashion fix here</span>
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-light mb-6 tracking-wide">Spring Collections</h2>
+                <p class="text-gray-500 text-sm md:text-base font-light max-w-sm mb-10 leading-relaxed text-center">Shop our luxury silk button-up blouses made with ultra-soft, washable silk.</p>
+                <a href="store.html" class="inline-block bg-black text-white text-xs font-semibold uppercase tracking-widest px-8 py-4 hover:bg-gray-800 transition shadow-md">Shop collection</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Shop this look -->
+<section class="py-16 md:py-24 bg-white border-t border-gray-100">
+    <div class="max-w-screen-2xl mx-auto px-6 md:px-12">
+        <div class="flex flex-col md:flex-row gap-12 lg:gap-24 items-center">
+            
+            <!-- Products Left -->
+            <div class="w-full md:w-1/2 flex flex-col justify-center" data-aos="fade-right">
+                <div class="mb-10">
+                    <span class="text-[10px] md:text-xs font-semibold tracking-[0.15em] uppercase mb-3 block text-black">Bundle and Save</span>
+                    <h2 class="text-4xl md:text-5xl font-light tracking-wide">Shop this look</h2>
+                </div>
+                
+                <!-- Product List -->
+                <div class="space-y-6">
+                    <!-- Product 1 -->
+                    <div class="flex items-center pb-6 border-b border-dashed border-gray-200">
+                        <div class="w-24 h-32 bg-gray-50 mr-6 shrink-0 rounded-sm overflow-hidden">
+                            <img src="assets/images/shop_look_prod_1.webp" alt="Patterned scarf" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex-grow">
+                            <h4 class="text-sm font-medium mb-1">Patterned scarf</h4>
+                            <p class="text-xs font-semibold text-black mb-3">$15.00</p>
+                            <div class="relative inline-block w-28">
+                                <select class="appearance-none w-full bg-white border border-gray-200 text-gray-500 text-[10px] px-3 py-2 pr-8 rounded-sm outline-none focus:border-gray-400 cursor-pointer">
+                                    <option>Beige / S</option>
+                                    <option>Beige / M</option>
+                                </select>
+                                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-500">
+                                    <i class="fas fa-chevron-down text-[8px]"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 2 -->
+                    <div class="flex items-center pb-6 border-b border-dashed border-gray-200">
+                        <div class="w-24 h-32 bg-gray-50 mr-6 shrink-0 rounded-sm overflow-hidden">
+                            <img src="assets/images/shop_look_prod_2.webp" alt="Ribbed modal T-shirt" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex-grow">
+                            <h4 class="text-sm font-medium mb-1">Ribbed modal T-shirt</h4>
+                            <div class="flex items-center gap-2 mb-3">
+                                <p class="text-xs text-gray-400 line-through">$10.00</p>
+                                <p class="text-xs font-semibold text-red-500">$8.00</p>
+                            </div>
+                            <div class="relative inline-block w-28">
+                                <select class="appearance-none w-full bg-white border border-gray-200 text-gray-500 text-[10px] px-3 py-2 pr-8 rounded-sm outline-none focus:border-gray-400 cursor-pointer">
+                                    <option>Beige / S</option>
+                                    <option>Beige / M</option>
+                                </select>
+                                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-500">
+                                    <i class="fas fa-chevron-down text-[8px]"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 3 -->
+                    <div class="flex items-center pb-6 border-b border-dashed border-gray-200">
+                        <div class="w-24 h-32 bg-gray-50 mr-6 shrink-0 rounded-sm overflow-hidden">
+                            <img src="assets/images/shop_look_prod_3.webp" alt="Cotton jersey top" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex-grow">
+                            <h4 class="text-sm font-medium mb-1">Cotton jersey top</h4>
+                            <div class="flex items-center gap-2 mb-3">
+                                <p class="text-xs text-gray-400 line-through">$10.00</p>
+                                <p class="text-xs font-semibold text-red-500">$8.00</p>
+                            </div>
+                            <div class="relative inline-block w-28">
+                                <select class="appearance-none w-full bg-white border border-gray-200 text-gray-500 text-[10px] px-3 py-2 pr-8 rounded-sm outline-none focus:border-gray-400 cursor-pointer">
+                                    <option>Beige / S</option>
+                                    <option>Beige / M</option>
+                                </select>
+                                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-500">
+                                    <i class="fas fa-chevron-down text-[8px]"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Add to cart button -->
+                <button class="w-full bg-black text-white text-[11px] font-semibold uppercase tracking-widest py-4 mt-8 hover:bg-gray-800 transition rounded-sm">
+                    Add selected to cart — $48.00 USD
+                </button>
+            </div>
+            
+            <!-- Large Image Right -->
+            <div class="w-full md:w-1/2 relative group" data-aos="fade-left">
+                <img src="assets/images/shop_look_model.webp" alt="Shop the look model" class="w-full h-auto object-cover bg-gray-100 aspect-[3/4]">
+                
+                <!-- Hotspots -->
+                <!-- Hotspot 1 -->
+                <div class="absolute top-[35%] left-[65%] w-4 h-4 bg-black rounded-full border-2 border-white shadow-lg cursor-pointer transform -translate-x-1/2 -translate-y-1/2 hover:scale-125 transition duration-300">
+                    <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-32 bg-white px-3 py-2 rounded shadow-xl text-center opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none">
+                        <p class="text-[10px] font-semibold text-black">Patterned scarf</p>
+                    </div>
+                </div>
+                
+                <!-- Hotspot 2 -->
+                <div class="absolute top-[60%] left-[30%] w-4 h-4 bg-black rounded-full border-2 border-white shadow-lg cursor-pointer transform -translate-x-1/2 -translate-y-1/2 hover:scale-125 transition duration-300">
+                    <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-32 bg-white px-3 py-2 rounded shadow-xl text-center opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none">
+                        <p class="text-[10px] font-semibold text-black">Ribbed modal T-shirt</p>
+                    </div>
+                </div>
+                
+                <!-- Hotspot 3 -->
+                <div class="absolute top-[80%] left-[55%] w-4 h-4 bg-black rounded-full border-2 border-white shadow-lg cursor-pointer transform -translate-x-1/2 -translate-y-1/2 hover:scale-125 transition duration-300">
+                    <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-32 bg-white px-3 py-2 rounded shadow-xl text-center opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none">
+                        <p class="text-[10px] font-semibold text-black">Cotton jersey top</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+<!-- Don't Miss The Last Deals -->
+<section class="py-16 md:py-24 px-6 md:px-12 max-w-screen-2xl mx-auto bg-white border-t border-gray-100">
+    <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+        <h2 class="text-3xl md:text-4xl font-semibold">Don't Miss The Last Deals</h2>
+        <p class="text-gray-500 text-sm md:text-base max-w-xl font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas.</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 stagger-cards">
+        
+        <!-- Deal Card 1 -->
+        <div class="group flex flex-col sm:flex-row gap-8 p-6 bg-white border border-gray-200 hover:border-red-500 transition-colors duration-300 cursor-pointer">
+            <!-- Image Area -->
+            <div class="relative w-full sm:w-1/2 aspect-[3/4] bg-gray-50 overflow-hidden shrink-0">
+                <img src="assets/images/deal_puffer.webp" alt="Puffer Jacket" class="w-full h-full object-cover">
+                <div class="absolute top-4 left-4 bg-white text-green-500 text-xs font-bold px-2 py-1 shadow-sm">26%</div>
+                <!-- Action Icons (visible on hover) -->
+                <div class="absolute top-4 right-4 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <button class="w-8 h-8 bg-white rounded-full flex items-center justify-center text-gray-700 shadow hover:text-black hover:bg-gray-50 transition"><i class="far fa-heart"></i></button>
+                    <button class="w-8 h-8 bg-white rounded-full flex items-center justify-center text-gray-700 shadow hover:text-black hover:bg-gray-50 transition"><i class="fas fa-expand"></i></button>
+                    <button class="w-8 h-8 bg-white rounded-full flex items-center justify-center text-gray-700 shadow hover:text-black hover:bg-gray-50 transition"><i class="fas fa-sync-alt"></i></button>
+                </div>
+            </div>
+            <!-- Details Area -->
+            <div class="flex flex-col justify-center w-full sm:w-1/2">
+                <h3 class="text-lg font-medium text-gray-800 mb-2">Short Nylon-Effect Puffer Jacket</h3>
+                <p class="text-lg font-semibold mb-4 text-black">$29.90 - $39.90</p>
+                <div class="flex items-center gap-2 mb-4 text-xs">
+                    <div class="text-yellow-400">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span class="text-gray-500">2 reviews</span>
+                </div>
+                <p class="text-gray-500 text-xs leading-relaxed mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                
+                <p class="text-xs font-bold text-black mb-3">Offer end in:</p>
+                <div class="countdown-timer flex items-center gap-1 mb-6 text-sm font-semibold">
+                    <div class="days px-2 py-1.5 bg-gray-100 text-gray-700 group-hover:bg-red-500 group-hover:text-white transition-colors duration-300">90</div>
+                    <span>:</span>
+                    <div class="hours px-2 py-1.5 bg-gray-100 text-gray-700 group-hover:bg-red-500 group-hover:text-white transition-colors duration-300">13</div>
+                    <span>:</span>
+                    <div class="minutes px-2 py-1.5 bg-gray-100 text-gray-700 group-hover:bg-red-500 group-hover:text-white transition-colors duration-300">44</div>
+                    <span>:</span>
+                    <div class="seconds px-2 py-1.5 bg-gray-100 text-gray-700 group-hover:bg-red-500 group-hover:text-white transition-colors duration-300">14</div>
+                </div>
+                
+                <p class="text-xs text-gray-500">Available: 12 - <span class="text-red-500 font-semibold">Sold: 87</span></p>
+            </div>
+        </div>
+
+        <!-- Deal Card 2 -->
+        <div class="group flex flex-col sm:flex-row gap-8 p-6 bg-white border border-gray-200 hover:border-red-500 transition-colors duration-300 cursor-pointer">
+            <!-- Image Area -->
+            <div class="relative w-full sm:w-1/2 aspect-[3/4] bg-gray-50 overflow-hidden shrink-0">
+                <img src="assets/images/deal_tshirt.webp" alt="Blue Starter Logo T-shirt" class="w-full h-full object-cover">
+                <div class="absolute top-4 left-4 bg-white text-green-500 text-xs font-bold px-2 py-1 shadow-sm">18%</div>
+                <!-- Action Icons (visible on hover) -->
+                <div class="absolute top-4 right-4 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <button class="w-8 h-8 bg-white rounded-full flex items-center justify-center text-gray-700 shadow hover:text-black hover:bg-gray-50 transition"><i class="far fa-heart"></i></button>
+                    <button class="w-8 h-8 bg-white rounded-full flex items-center justify-center text-gray-700 shadow hover:text-black hover:bg-gray-50 transition"><i class="fas fa-expand"></i></button>
+                    <button class="w-8 h-8 bg-white rounded-full flex items-center justify-center text-gray-700 shadow hover:text-black hover:bg-gray-50 transition"><i class="fas fa-sync-alt"></i></button>
+                </div>
+            </div>
+            <!-- Details Area -->
+            <div class="flex flex-col justify-center w-full sm:w-1/2">
+                <h3 class="text-lg font-medium text-gray-800 mb-2">Blue Starter Logo T-shirt</h3>
+                <p class="text-lg font-semibold mb-4"><span class="line-through text-gray-300 text-sm mr-2">$22.70</span> <span class="text-red-500">$18.70</span></p>
+                <div class="flex items-center gap-2 mb-4 text-xs">
+                    <div class="text-yellow-400">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <span class="text-gray-500">1 review</span>
+                </div>
+                <p class="text-gray-500 text-xs leading-relaxed mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                
+                <p class="text-xs font-bold text-black mb-3">Offer end in:</p>
+                <div class="countdown-timer flex items-center gap-1 mb-6 text-sm font-semibold">
+                    <div class="days px-2 py-1.5 bg-gray-100 text-gray-700 group-hover:bg-red-500 group-hover:text-white transition-colors duration-300">91</div>
+                    <span>:</span>
+                    <div class="hours px-2 py-1.5 bg-gray-100 text-gray-700 group-hover:bg-red-500 group-hover:text-white transition-colors duration-300">13</div>
+                    <span>:</span>
+                    <div class="minutes px-2 py-1.5 bg-gray-100 text-gray-700 group-hover:bg-red-500 group-hover:text-white transition-colors duration-300">43</div>
+                    <span>:</span>
+                    <div class="seconds px-2 py-1.5 bg-gray-100 text-gray-700 group-hover:bg-red-500 group-hover:text-white transition-colors duration-300">56</div>
+                </div>
+                
+                <p class="text-xs text-gray-500">Available: 71 - <span class="text-red-500 font-semibold">Sold: 63</span></p>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- Promotional Banner -->
+<section class="max-w-screen-2xl mx-auto mb-24 bg-[#F9F9F9]">
+    <div class="flex flex-col md:flex-row items-stretch">
+        <!-- Text Content -->
+        <div class="w-full md:w-1/2 p-10 md:p-16 lg:p-24 flex flex-col justify-center text-left">
+            <h4 class="text-xs font-bold tracking-[0.2em] uppercase mb-6 text-black">New Collection</h4>
+            <h2 class="text-4xl lg:text-5xl leading-tight text-black mb-6 font-medium">Best Sweatshirts and<br>tracksuits for everyone!</h2>
+            <p class="text-gray-500 mb-10 max-w-md text-sm leading-relaxed">
+                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+            </p>
+            <div>
+                <a href="store.html" class="inline-flex items-center justify-center border border-black px-8 py-3.5 text-sm font-medium text-black hover:bg-black hover:text-white transition-colors duration-300">
+                    Shop Now <span class="ml-3">→</span>
+                </a>
+            </div>
+        </div>
+        <!-- Image -->
+        <div class="w-full md:w-1/2 relative min-h-[400px] md:min-h-[500px]">
+            <img src="assets/images/banner_floral.webp" alt="New Collection" class="absolute inset-0 w-full h-full object-cover object-top">
+        </div>
+    </div>
+</section>
+
+<!-- Best Seller -->
+<section class="py-24 px-6 md:px-12 max-w-screen-2xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-4xl md:text-5xl display-font mb-4">Best Seller</h2>
+<p class="text-gray-600 text-sm">Shop the Latest Styles: Stay ahead of the curve with our newest arrivals</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 stagger-cards">
+<!-- Product 1 -->
+<div class="product-card group cursor-pointer relative">
+<div class="relative overflow-hidden aspect-[3/4] mb-4 bg-softgray rounded-lg">
+<img src="assets/images/bestsellers/product_1.webp" alt="Ribbed Tank Top" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+<!-- Hover actions -->
+<div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex items-center bg-white rounded shadow-md opacity-0 group-hover:opacity-100 transition duration-300">
+<button class="p-3 hover:bg-gray-100 border-r border-gray-200 transition"><i class="far fa-envelope"></i></button>
+<button class="p-3 hover:bg-gray-100 border-r border-gray-200 transition"><i class="far fa-heart"></i></button>
+<button class="p-3 hover:bg-gray-100 border-r border-gray-200 transition"><i class="fas fa-arrows-alt"></i></button>
+<button class="p-3 hover:bg-gray-100 transition"><i class="far fa-eye"></i></button>
+</div>
+<!-- Sizes -->
+<div class="absolute bottom-0 w-full bg-black bg-opacity-40 text-white text-xs font-semibold py-2 flex justify-center space-x-3 opacity-0 group-hover:opacity-100 transition duration-300 backdrop-blur-sm">
+<span>S</span><span>M</span><span>L</span><span>XL</span>
+</div>
+</div>
+<div>
+<h3 class="text-sm font-medium mb-1">Ribbed Tank Top</h3>
+<p class="text-sm font-semibold mb-2">$16.95</p>
+<div class="flex space-x-2">
+<span class="w-4 h-4 rounded-full bg-orange-400 border border-gray-300 ring-1 ring-black ring-offset-1"></span>
+<span class="w-4 h-4 rounded-full bg-black border border-gray-300"></span>
+<span class="w-4 h-4 rounded-full bg-white border border-gray-300"></span>
+</div>
+</div>
+</div>
+
+<!-- Product 2 -->
+<div class="product-card group cursor-pointer relative">
+<div class="relative overflow-hidden aspect-[3/4] mb-4 bg-softgray rounded-lg">
+<img src="assets/images/bestsellers/product_2.webp" alt="Ribbed modal T-shirt" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+<!-- Hover actions -->
+<div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex items-center bg-white rounded shadow-md opacity-0 group-hover:opacity-100 transition duration-300">
+<button class="p-3 hover:bg-gray-100 border-r border-gray-200 transition"><i class="far fa-envelope"></i></button>
+<button class="p-3 hover:bg-gray-100 border-r border-gray-200 transition"><i class="far fa-heart"></i></button>
+<button class="p-3 hover:bg-gray-100 border-r border-gray-200 transition"><i class="fas fa-arrows-alt"></i></button>
+<button class="p-3 hover:bg-gray-100 transition"><i class="far fa-eye"></i></button>
+</div>
+<!-- Sizes -->
+<div class="absolute bottom-0 w-full bg-black bg-opacity-40 text-white text-xs font-semibold py-2 flex justify-center space-x-3 opacity-0 group-hover:opacity-100 transition duration-300 backdrop-blur-sm">
+<span>M</span><span>L</span><span>XL</span>
+</div>
+</div>
+<div>
+<h3 class="text-sm font-medium mb-1">Ribbed modal T-shirt</h3>
+<p class="text-sm font-semibold mb-2">From $18.95</p>
+<div class="flex space-x-2">
+<span class="w-4 h-4 rounded-full bg-yellow-700 border border-gray-300"></span>
+<span class="w-4 h-4 rounded-full bg-purple-400 border border-gray-300 ring-1 ring-black ring-offset-1"></span>
+<span class="w-4 h-4 rounded-full bg-green-200 border border-gray-300"></span>
+</div>
+</div>
+</div>
+
+<!-- Product 3 -->
+<div class="product-card group cursor-pointer relative">
+<div class="relative overflow-hidden aspect-[3/4] mb-4 bg-softgray rounded-lg">
+<img src="assets/images/bestsellers/product_3.webp" alt="Oversized Printed T-shirt" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+<!-- Hover actions -->
+<div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex items-center bg-white rounded shadow-md opacity-0 group-hover:opacity-100 transition duration-300">
+<button class="p-3 hover:bg-gray-100 border-r border-gray-200 transition"><i class="far fa-envelope"></i></button>
+<button class="p-3 hover:bg-gray-100 border-r border-gray-200 transition"><i class="far fa-heart"></i></button>
+<button class="p-3 hover:bg-gray-100 border-r border-gray-200 transition"><i class="fas fa-arrows-alt"></i></button>
+<button class="p-3 hover:bg-gray-100 transition"><i class="far fa-eye"></i></button>
+</div>
+<!-- Sizes -->
+<div class="absolute bottom-0 w-full bg-black bg-opacity-40 text-white text-xs font-semibold py-2 flex justify-center space-x-3 opacity-0 group-hover:opacity-100 transition duration-300 backdrop-blur-sm">
+<span>S</span><span>M</span><span>L</span><span>XL</span>
+</div>
+</div>
+<div>
+<h3 class="text-sm font-medium mb-1">Oversized Printed T-shirt</h3>
+<p class="text-sm font-semibold mb-2">$10.00</p>
+</div>
+</div>
+
+<!-- Product 4 -->
+<div class="product-card group cursor-pointer relative">
+<div class="relative overflow-hidden aspect-[3/4] mb-4 bg-softgray rounded-lg">
+<img src="assets/images/bestsellers/product_4.webp" alt="Oversized Printed T-shirt" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+<!-- Hover actions -->
+<div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex items-center bg-white rounded shadow-md opacity-0 group-hover:opacity-100 transition duration-300">
+<button class="p-3 hover:bg-gray-100 border-r border-gray-200 transition"><i class="far fa-envelope"></i></button>
+<button class="p-3 hover:bg-gray-100 border-r border-gray-200 transition"><i class="far fa-heart"></i></button>
+<button class="p-3 hover:bg-gray-100 border-r border-gray-200 transition"><i class="fas fa-arrows-alt"></i></button>
+<button class="p-3 hover:bg-gray-100 transition"><i class="far fa-eye"></i></button>
+</div>
+<!-- Sizes -->
+<div class="absolute bottom-0 w-full bg-black bg-opacity-40 text-white text-xs font-semibold py-2 flex justify-center space-x-3 opacity-0 group-hover:opacity-100 transition duration-300 backdrop-blur-sm">
+<span>S</span><span>M</span><span>L</span><span>XL</span>
+</div>
+</div>
+<div>
+<h3 class="text-sm font-medium mb-1">Oversized Printed T-shirt</h3>
+<p class="text-sm font-semibold mb-2">$16.95</p>
+<div class="flex space-x-2">
+<span class="w-4 h-4 rounded-full bg-white border border-gray-300 ring-1 ring-black ring-offset-1"></span>
+<span class="w-4 h-4 rounded-full bg-pink-400 border border-gray-300"></span>
+<span class="w-4 h-4 rounded-full bg-black border border-gray-300"></span>
+</div>
+</div>
+</div>
+
+<!-- Product 5 -->
+<div class="product-card group cursor-pointer relative">
+<div class="relative overflow-hidden aspect-[3/4] mb-4 bg-softgray rounded-lg">
+<img src="assets/images/bestsellers/product_5.webp" alt="V-neck linen T-shirt" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+<!-- Hover actions -->
+<div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex items-center bg-white rounded shadow-md opacity-0 group-hover:opacity-100 transition duration-300">
+<button class="p-3 hover:bg-gray-100 border-r border-gray-200 transition"><i class="far fa-envelope"></i></button>
+<button class="p-3 hover:bg-gray-100 border-r border-gray-200 transition"><i class="far fa-heart"></i></button>
+<button class="p-3 hover:bg-gray-100 border-r border-gray-200 transition"><i class="fas fa-arrows-alt"></i></button>
+<button class="p-3 hover:bg-gray-100 transition"><i class="far fa-eye"></i></button>
+</div>
+<!-- Sizes -->
+<div class="absolute bottom-0 w-full bg-black bg-opacity-40 text-white text-xs font-semibold py-2 flex justify-center space-x-3 opacity-0 group-hover:opacity-100 transition duration-300 backdrop-blur-sm">
+<span>S</span><span>M</span><span>L</span><span>XL</span>
+</div>
+</div>
+<div>
+<h3 class="text-sm font-medium mb-1">V-neck linen T-shirt</h3>
+<p class="text-sm font-semibold mb-2">$114.95</p>
+<div class="flex space-x-2">
+<span class="w-4 h-4 rounded-full bg-yellow-800 border border-gray-300 ring-1 ring-black ring-offset-1"></span>
+<span class="w-4 h-4 rounded-full bg-white border border-gray-300"></span>
+</div>
+</div>
+</div>
+
+<!-- Product 6 -->
+<div class="product-card group cursor-pointer relative">
+<div class="relative overflow-hidden aspect-[3/4] mb-4 bg-softgray rounded-lg">
+<img src="assets/images/bestsellers/product_6.webp" alt="Loose Fit Sweatshirt" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+<!-- Hover actions -->
+<div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex items-center bg-white rounded shadow-md opacity-0 group-hover:opacity-100 transition duration-300">
+<button class="p-3 hover:bg-gray-100 border-r border-gray-200 transition"><i class="far fa-envelope"></i></button>
+<button class="p-3 hover:bg-gray-100 border-r border-gray-200 transition"><i class="far fa-heart"></i></button>
+<button class="p-3 hover:bg-gray-100 border-r border-gray-200 transition"><i class="fas fa-arrows-alt"></i></button>
+<button class="p-3 hover:bg-gray-100 transition"><i class="far fa-eye"></i></button>
+</div>
+<!-- Sizes -->
+<div class="absolute bottom-0 w-full bg-black bg-opacity-40 text-white text-xs font-semibold py-2 flex justify-center space-x-3 opacity-0 group-hover:opacity-100 transition duration-300 backdrop-blur-sm">
+<span>S</span><span>M</span><span>L</span><span>XL</span>
+</div>
+</div>
+<div>
+<h3 class="text-sm font-medium mb-1">Loose Fit Sweatshirt</h3>
+<p class="text-sm font-semibold mb-2">$10.00</p>
+<div class="flex space-x-2">
+<span class="w-4 h-4 rounded-full bg-green-100 border border-gray-300 ring-1 ring-black ring-offset-1"></span>
+<span class="w-4 h-4 rounded-full bg-black border border-gray-300"></span>
+<span class="w-4 h-4 rounded-full bg-blue-200 border border-gray-300"></span>
+<span class="w-4 h-4 rounded-full bg-blue-800 border border-gray-300"></span>
+<span class="w-4 h-4 rounded-full bg-white border border-gray-300"></span>
+<span class="w-4 h-4 rounded-full bg-gray-200 border border-gray-300"></span>
+</div>
+</div>
+</div>
+
+<!-- Product 7 -->
+<div class="product-card group cursor-pointer relative">
+<div class="relative overflow-hidden aspect-[3/4] mb-4 bg-softgray rounded-lg">
+<img src="assets/images/bestsellers/product_7.webp" alt="Regular Fit Oxford Shirt" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+<!-- Hover actions -->
+<div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex items-center bg-white rounded shadow-md opacity-0 group-hover:opacity-100 transition duration-300">
+<button class="p-3 hover:bg-gray-100 border-r border-gray-200 transition"><i class="far fa-envelope"></i></button>
+<button class="p-3 hover:bg-gray-100 border-r border-gray-200 transition"><i class="far fa-heart"></i></button>
+<button class="p-3 hover:bg-gray-100 border-r border-gray-200 transition"><i class="fas fa-arrows-alt"></i></button>
+<button class="p-3 hover:bg-gray-100 transition"><i class="far fa-eye"></i></button>
+</div>
+<!-- Sizes -->
+<div class="absolute bottom-0 w-full bg-black bg-opacity-40 text-white text-xs font-semibold py-2 flex justify-center space-x-3 opacity-0 group-hover:opacity-100 transition duration-300 backdrop-blur-sm">
+<span>S</span><span>M</span><span>L</span>
+</div>
+</div>
+<div>
+<h3 class="text-sm font-medium mb-1">Regular Fit Oxford Shirt</h3>
+<p class="text-sm font-semibold mb-2">$10.00</p>
+<div class="flex space-x-2">
+<span class="w-4 h-4 rounded-full bg-black border border-gray-300 ring-1 ring-black ring-offset-1"></span>
+<span class="w-4 h-4 rounded-full bg-blue-900 border border-gray-300"></span>
+<span class="w-4 h-4 rounded-full bg-yellow-100 border border-gray-300"></span>
+<span class="w-4 h-4 rounded-full bg-blue-200 border border-gray-300"></span>
+<span class="w-4 h-4 rounded-full bg-white border border-gray-300"></span>
+</div>
+</div>
+</div>
+
+<!-- Product 8 -->
+<div class="product-card group cursor-pointer relative">
+<div class="relative overflow-hidden aspect-[3/4] mb-4 bg-softgray rounded-lg">
+<img src="assets/images/bestsellers/product_8.webp" alt="Loose Fit Hoodie" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+<!-- Hover actions -->
+<div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex items-center bg-white rounded shadow-md opacity-0 group-hover:opacity-100 transition duration-300">
+<button class="p-3 hover:bg-gray-100 border-r border-gray-200 transition"><i class="far fa-envelope"></i></button>
+<button class="p-3 hover:bg-gray-100 border-r border-gray-200 transition"><i class="far fa-heart"></i></button>
+<button class="p-3 hover:bg-gray-100 border-r border-gray-200 transition"><i class="fas fa-arrows-alt"></i></button>
+<button class="p-3 hover:bg-gray-100 transition"><i class="far fa-eye"></i></button>
+</div>
+<!-- Sizes -->
+<div class="absolute bottom-0 w-full bg-black bg-opacity-40 text-white text-xs font-semibold py-2 flex justify-center space-x-3 opacity-0 group-hover:opacity-100 transition duration-300 backdrop-blur-sm">
+<span>S</span><span>M</span><span>L</span><span>XL</span>
+</div>
+</div>
+<div>
+<h3 class="text-sm font-medium mb-1">Loose Fit Hoodie</h3>
+<p class="text-sm font-semibold mb-2">$9.95</p>
+<div class="flex space-x-2">
+<span class="w-4 h-4 rounded-full bg-white border border-gray-300 ring-1 ring-black ring-offset-1"></span>
+<span class="w-4 h-4 rounded-full bg-black border border-gray-300"></span>
+<span class="w-4 h-4 rounded-full bg-blue-200 border border-gray-300"></span>
+</div>
+</div>
+</div>
+</div>
+
+<div class="text-center mt-12">
+<button class="border border-black px-8 py-3 text-sm font-semibold uppercase hover:bg-black hover:text-white transition">Load more</button>
+</div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="py-24 px-6 md:px-12 bg-[#F6F5F2]">
+    <div class="max-w-screen-xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            
+            <!-- Text Content (Left) -->
+            <div class="text-left">
+                <h2 class="text-4xl md:text-5xl display-font mb-10 text-left text-black">Our customer's reviews</h2>
+                
+                <span class="text-7xl font-sans font-bold text-gray-300 leading-none block mb-6">“</span>
+                
+                <div class="flex text-orange-400 mb-8 text-xl space-x-1">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                
+                <p class="text-gray-600 text-lg md:text-xl font-sans mb-12 leading-relaxed">"I have been shopping with this web fashion site for over a year now and I can confidently say it is the best online fashion site out there. The shipping is always fast and the customer service team is friendly and helpful. I highly recommend this site to anyone looking for affordable clothing."</p>
+                
+                <div>
+                    <p class="font-bold text-xs uppercase tracking-widest text-black">JENIFER UNIZ</p>
+                </div>
+            </div>
+            
+            <!-- Image (Right) -->
+            <div class="w-full h-full min-h-[400px] md:min-h-[500px] rounded-lg overflow-hidden shadow-lg relative" data-aos="fade-left">
+                <img src="assets/images/spring_collection.webp" alt="Customer styling" class="absolute inset-0 w-full h-full object-cover">
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<!-- Editorial Section -->
+<section class="relative h-[80vh] overflow-hidden flex items-center justify-center text-center my-12">
+<img alt="Editorial" class="absolute inset-0 w-full h-[120%] object-cover object-center z-[-1]" data-aos="fade-in" src="assets/images/img_cc0130fe.webp" style="transform: translateY(-10%);"/>
+<div class="absolute inset-0 bg-black bg-opacity-30"></div>
+<div class="relative z-10 px-6">
+<h2 class="text-5xl md:text-7xl text-white display-font mb-6" data-aos="zoom-in" data-aos-duration="1000">Style is an Attitude</h2>
+<a class="btn-stackly bg-transparent border-white text-white hover:bg-white hover:text-black" href="about.html">Our Story</a>
+</div>
+</section>
+
+<!-- Our Professional Team -->
+<section class="py-24 px-6 md:px-12 max-w-screen-xl mx-auto" data-aos="fade-up">
+    <!-- Header -->
+    <div class="mb-12">
+        <p class="font-serif italic text-gray-500 mb-2">Professionals</p>
+        <h2 class="text-3xl md:text-5xl display-font font-bold mb-4 uppercase tracking-wide">Our Professional Team</h2>
+        <p class="font-serif italic text-gray-500 max-w-2xl">Curabitur placerat, tortor nec eleifend, justo urna ante</p>
+        <div class="w-16 h-[2px] bg-black mt-6"></div>
+    </div>
+
+    <!-- Team Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+        <!-- Team Member 1 -->
+        <div class="relative group overflow-hidden bg-gray-100 aspect-square">
+            <img src="assets/images/team/team_1.webp" alt="Nicolas Role" class="w-full h-full object-cover grayscale">
+            <!-- Overlay Info -->
+            <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-[85%] bg-white bg-opacity-[0.85] py-4 px-2 text-center opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 shadow-md">
+                <h4 class="text-xs md:text-sm font-bold uppercase tracking-wider text-black">Nicolas Role</h4>
+                <p class="text-[10px] md:text-xs font-serif italic text-gray-500 mt-1">Photographer</p>
+            </div>
+        </div>
+        <!-- Team Member 2 -->
+        <div class="relative group overflow-hidden bg-gray-100 aspect-square">
+            <img src="assets/images/team/team_2.webp" alt="Anna Luster" class="w-full h-full object-cover grayscale">
+            <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-[85%] bg-white bg-opacity-[0.85] py-4 px-2 text-center opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 shadow-md">
+                <h4 class="text-xs md:text-sm font-bold uppercase tracking-wider text-black">Anna Luster</h4>
+                <p class="text-[10px] md:text-xs font-serif italic text-gray-500 mt-1">Photo model</p>
+            </div>
+        </div>
+        <!-- Team Member 3 -->
+        <div class="relative group overflow-hidden bg-gray-100 aspect-square">
+            <img src="assets/images/team/team_3.webp" alt="Sophia Laurent" class="w-full h-full object-cover grayscale">
+            <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-[85%] bg-white bg-opacity-[0.85] py-4 px-2 text-center opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 shadow-md">
+                <h4 class="text-xs md:text-sm font-bold uppercase tracking-wider text-black">Sophia Laurent</h4>
+                <p class="text-[10px] md:text-xs font-serif italic text-gray-500 mt-1">Art Director</p>
+            </div>
+        </div>
+        <!-- Team Member 4 -->
+        <div class="relative group overflow-hidden bg-gray-100 aspect-square">
+            <img src="assets/images/team/team_4.webp" alt="Emma Stone" class="w-full h-full object-cover grayscale">
+            <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-[85%] bg-white bg-opacity-[0.85] py-4 px-2 text-center opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 shadow-md">
+                <h4 class="text-xs md:text-sm font-bold uppercase tracking-wider text-black">Emma Stone</h4>
+                <p class="text-[10px] md:text-xs font-serif italic text-gray-500 mt-1">Stylist</p>
+            </div>
+        </div>
+        <!-- Team Member 5 -->
+        <div class="relative group overflow-hidden bg-gray-100 aspect-square">
+            <img src="assets/images/team/team_5.webp" alt="Mia Wong" class="w-full h-full object-cover grayscale">
+            <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-[85%] bg-white bg-opacity-[0.85] py-4 px-2 text-center opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 shadow-md">
+                <h4 class="text-xs md:text-sm font-bold uppercase tracking-wider text-black">Mia Wong</h4>
+                <p class="text-[10px] md:text-xs font-serif italic text-gray-500 mt-1">Creative Lead</p>
+            </div>
+        </div>
+        <!-- Team Member 6 -->
+        <div class="relative group overflow-hidden bg-gray-100 aspect-square">
+            <img src="assets/images/team/team_6.webp" alt="Jann Ulurt" class="w-full h-full object-cover grayscale">
+            <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-[85%] bg-white bg-opacity-[0.85] py-4 px-2 text-center opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 shadow-md">
+                <h4 class="text-xs md:text-sm font-bold uppercase tracking-wider text-black">Jann Ulurt</h4>
+                <p class="text-[10px] md:text-xs font-serif italic text-gray-500 mt-1">Producer</p>
+            </div>
+        </div>
+        <!-- Team Member 7 -->
+        <div class="relative group overflow-hidden bg-gray-100 aspect-square">
+            <img src="assets/images/team/team_7.webp" alt="Cynthia Stone" class="w-full h-full object-cover grayscale">
+            <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-[85%] bg-white bg-opacity-[0.85] py-4 px-2 text-center opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 shadow-md">
+                <h4 class="text-xs md:text-sm font-bold uppercase tracking-wider text-black">Cynthia Stone</h4>
+                <p class="text-[10px] md:text-xs font-serif italic text-gray-500 mt-1">Photo model</p>
+            </div>
+        </div>
+        <!-- Team Member 8 -->
+        <div class="relative group overflow-hidden bg-gray-100 aspect-square">
+            <img src="assets/images/team/team_8.webp" alt="Chloe Vance" class="w-full h-full object-cover grayscale">
+            <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-[85%] bg-white bg-opacity-[0.85] py-4 px-2 text-center opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 shadow-md">
+                <h4 class="text-xs md:text-sm font-bold uppercase tracking-wider text-black">Chloe Vance</h4>
+                <p class="text-[10px] md:text-xs font-serif italic text-gray-500 mt-1">Makeup Artist</p>
+            </div>
+        </div>
+        <!-- Team Member 9 -->
+        <div class="relative group overflow-hidden bg-gray-100 aspect-square">
+            <img src="assets/images/team/team_9.webp" alt="Priya Patel" class="w-full h-full object-cover grayscale">
+            <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-[85%] bg-white bg-opacity-[0.85] py-4 px-2 text-center opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 shadow-md">
+                <h4 class="text-xs md:text-sm font-bold uppercase tracking-wider text-black">Priya Patel</h4>
+                <p class="text-[10px] md:text-xs font-serif italic text-gray-500 mt-1">Lead Editor</p>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+<!-- Footer Container -->
+<footer class="w-full mt-auto" id="footer-container"></footer>
+<!-- Scripts -->
+<!-- GSAP Core -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<!-- GSAP ScrollTrigger -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<!-- Main JS -->
+<script src="js/main.js"></script>
+<script>
+    // Initialize Swiper for Testimonials
+    document.addEventListener('DOMContentLoaded', function() {
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 24,
+            loop: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+            },
+        });
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        if(typeof Swiper !== 'undefined') {
+            new Swiper('.hero-swiper', {
+                loop: true,
+                effect: 'fade', // Add fade effect for beautiful transitions
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: false,
+                },
+                speed: 2000
+            });
+        }
+    });
+</script>
+</body>
+</html>

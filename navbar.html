@@ -1,0 +1,75 @@
+<nav class="relative z-50 flex items-center justify-between px-6 py-4 md:px-12 bg-transparent text-black">
+    <!-- Logo -->
+    <a href="index.html" class="flex items-center">
+        <img src="assets/images/logo.webp" alt="Stackly" class="h-8 md:h-10 w-auto">
+    </a>
+
+    <!-- Desktop Menu -->
+    <div class="hidden lg:flex space-x-6 xl:space-x-8 text-sm uppercase tracking-wide font-bold">
+        <a href="index.html" class="hover:text-accent transition">Home</a>
+        <a href="about.html" class="hover:text-accent transition">About</a>
+        <a href="services.html" class="hover:text-accent transition">Services</a>
+        <div class="relative group">
+            <a href="#" class="hover:text-accent transition flex items-center gap-1 cursor-pointer">Pages <i
+                    class="fas fa-angle-down text-sm"></i></a>
+            <!-- Outer wrapper with top padding acts as a hover bridge -->
+            <div
+                class="absolute left-0 top-full pt-4 w-48 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 z-50">
+                <div
+                    class="bg-white text-black py-2 rounded shadow-lg normal-case font-normal text-sm border border-gray-200">
+                    <a href="store.html"
+                        class="block px-4 py-2 hover:bg-gray-100 hover:text-accent transition">Store</a>
+                    <a href="view_cart.html" class="block px-4 py-2 hover:bg-gray-100 hover:text-accent transition">View
+                        Cart</a>
+                    <a href="checkout.html" class="block px-4 py-2 hover:bg-gray-100 hover:text-accent transition">Check
+                        Out</a>
+                    <a href="payment.html"
+                        class="block px-4 py-2 hover:bg-gray-100 hover:text-accent transition">Payment</a>
+                    <a href="my_account.html" class="block px-4 py-2 hover:bg-gray-100 hover:text-accent transition">My
+                        Account</a>
+                    <a href="invoice.html"
+                        class="block px-4 py-2 hover:bg-gray-100 hover:text-accent transition">Invoice</a>
+                </div>
+            </div>
+        </div>
+        <a href="blog.html" class="hover:text-accent transition">Blog</a>
+        <a href="contact.html" class="hover:text-accent transition">Contact</a>
+    </div>
+
+    <!-- Right Icons -->
+    <div class="hidden lg:flex items-center space-x-4 xl:space-x-6 text-sm">
+        <a href="login.html" class="hover:text-accent transition">Login</a>
+        <a href="signup.html" class="hover:text-accent transition">Sign Up</a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button class="lg:hidden mobile-menu-btn text-2xl focus:outline-none">
+        <i class="fas fa-bars"></i>
+    </button>
+</nav>
+
+<!-- Mobile Menu Overlay -->
+<div
+    class="mobile-menu hidden lg:hidden fixed inset-0 bg-offwhite z-40 flex flex-col items-center pt-24 pb-8 overflow-y-auto space-y-6 text-xl display-font uppercase font-bold">
+    <a href="index.html" class="mobile-menu-link hover:text-accent transition">Home</a>
+    <a href="about.html" class="mobile-menu-link hover:text-accent transition">About</a>
+    <a href="services.html" class="mobile-menu-link hover:text-accent transition">Services</a>
+    <div class="flex flex-col items-center w-full">
+        <a href="#" class="mobile-pages-toggle hover:text-accent transition flex items-center gap-2">Pages <i
+                class="fas fa-angle-down text-lg"></i></a>
+        <div class="mobile-pages-dropdown hidden flex flex-col items-center mt-4 space-y-4 text-base normal-case font-medium">
+            <a href="store.html" class="mobile-menu-link hover:text-accent transition">Store</a>
+            <a href="view_cart.html" class="mobile-menu-link hover:text-accent transition">View Cart</a>
+            <a href="checkout.html" class="mobile-menu-link hover:text-accent transition">Check Out</a>
+            <a href="payment.html" class="mobile-menu-link hover:text-accent transition">Payment</a>
+            <a href="my_account.html" class="mobile-menu-link hover:text-accent transition">My Account</a>
+            <a href="invoice.html" class="mobile-menu-link hover:text-accent transition">Invoice</a>
+        </div>
+    </div>
+    <a href="blog.html" class="mobile-menu-link hover:text-accent transition">Blog</a>
+    <a href="contact.html" class="mobile-menu-link hover:text-accent transition">Contact</a>
+    <div class="flex space-x-4 mt-6 pt-6 border-t border-gray-300">
+        <a href="login.html" class="mobile-menu-link text-sm">Login</a>
+        <a href="signup.html" class="mobile-menu-link text-sm">Sign Up</a>
+    </div>
+</div>
