@@ -33,7 +33,7 @@
 <p class="font-light tracking-widest uppercase text-sm">Sign in to explore your curated world.</p>
 </div>
 <!-- Back to home overlay link -->
-<a class="absolute top-8 left-8 text-white uppercase text-xs tracking-widest font-semibold hover:text-accent transition z-20" href="index.html">
+<a class="hidden lg:block absolute top-8 left-8 text-white uppercase text-xs tracking-widest font-semibold hover:text-accent transition z-20" href="index.html">
 <i class="fas fa-arrow-left mr-2"></i> Back to Home
             </a>
 </div>
@@ -76,7 +76,7 @@
 <label class="flex items-center text-gray-600 cursor-pointer">
 <input class="mr-2 accent-black" type="checkbox"/> Remember Me
                         </label>
-<a class="text-black hover:text-accent transition border-b border-black hover:border-accent" href="#">Forgot Password?</a>
+<a class="text-black hover:text-accent transition border-b border-black hover:border-accent" href="404.html">Forgot Password?</a>
 </div>
 <button class="btn-stackly w-full py-4 mt-4" type="submit">Login</button>
 </form>
@@ -87,10 +87,10 @@
 <div class="flex-grow border-t border-gray-300"></div>
 </div>
 <div class="flex space-x-4">
-<button class="flex-1 py-3 border border-gray-300 hover:border-black transition flex items-center justify-center text-sm font-semibold">
+<button type="button" onclick="window.location.href='404.html'" class="flex-1 py-3 border border-gray-300 hover:border-black transition flex items-center justify-center text-sm font-semibold">
 <i class="fab fa-google mr-2"></i> Google
                         </button>
-<button class="flex-1 py-3 border border-gray-300 hover:border-black transition flex items-center justify-center text-sm font-semibold">
+<button type="button" onclick="window.location.href='404.html'" class="flex-1 py-3 border border-gray-300 hover:border-black transition flex items-center justify-center text-sm font-semibold">
 <i class="fab fa-apple mr-2 text-lg"></i> Apple
                         </button>
 </div>
@@ -98,6 +98,11 @@
 <p class="text-center mt-8 text-sm text-gray-600">
                     Don't have an account? <a class="text-black font-semibold uppercase tracking-wide border-b border-black" href="signup.html">Sign Up</a>
 </p>
+<div class="text-center mt-12 lg:hidden">
+    <a href="index.html" class="text-xs uppercase tracking-widest font-semibold text-gray-500 hover:text-black transition">
+        <i class="fas fa-arrow-left mr-2"></i> Back to Home
+    </a>
+</div>
 </div>
 </div>
 </main>

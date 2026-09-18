@@ -35,7 +35,7 @@
                 <p class="font-light tracking-widest uppercase text-sm">Become part of our curated world.</p>
             </div>
             <!-- Back to home overlay link -->
-            <a class="absolute top-8 left-8 text-white uppercase text-xs tracking-widest font-semibold hover:text-accent transition z-20" href="index.html">
+            <a class="hidden lg:block absolute top-8 left-8 text-white uppercase text-xs tracking-widest font-semibold hover:text-accent transition z-20" href="index.html">
                 <i class="fas fa-arrow-left mr-2"></i> Back to Home
             </a>
         </div>
@@ -120,10 +120,10 @@
                         <div class="flex-grow border-t border-gray-300"></div>
                     </div>
                     <div class="flex space-x-4">
-                        <button class="flex-1 py-3 border border-gray-300 hover:border-black transition flex items-center justify-center text-sm font-semibold">
+                        <button type="button" onclick="window.location.href='404.html'" class="flex-1 py-3 border border-gray-300 hover:border-black transition flex items-center justify-center text-sm font-semibold">
                             <i class="fab fa-google mr-2"></i> Google
                         </button>
-                        <button class="flex-1 py-3 border border-gray-300 hover:border-black transition flex items-center justify-center text-sm font-semibold">
+                        <button type="button" onclick="window.location.href='404.html'" class="flex-1 py-3 border border-gray-300 hover:border-black transition flex items-center justify-center text-sm font-semibold">
                             <i class="fab fa-apple mr-2 text-lg"></i> Apple
                         </button>
                     </div>
@@ -132,6 +132,11 @@
                 <p class="text-center mt-8 text-sm text-gray-600">
                     Already have an account? <a href="login.html" class="text-black font-semibold uppercase tracking-wide border-b border-black">Login</a>
                 </p>
+                <div class="text-center mt-12 lg:hidden">
+                    <a href="index.html" class="text-xs uppercase tracking-widest font-semibold text-gray-500 hover:text-black transition">
+                        <i class="fas fa-arrow-left mr-2"></i> Back to Home
+                    </a>
+                </div>
             </div>
         </div>
     </main>
