@@ -68,9 +68,15 @@
     <div class="relative z-20 flex flex-col items-center justify-center h-full px-6 max-w-4xl mx-auto text-center text-white drop-shadow-2xl">
         <h1 class="text-5xl md:text-7xl lg:text-8xl font-normal display-font mb-6" style="text-shadow: 0 4px 10px rgba(0,0,0,0.5);">Style is an Attitude</h1>
         <p class="text-lg md:text-xl font-light mb-10 max-w-2xl mx-auto" style="text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Contemporary fashion curated for the modern generation.</p>
-        <div class="flex flex-col sm:flex-row justify-center gap-4">
-            <a class="hero-btn btn-stackly bg-white text-black border-white hover:bg-black hover:text-white" href="store.html">Shop Collection</a>
-            <a class="hero-btn btn-stackly border-white text-white bg-transparent hover:bg-white hover:text-black shadow-lg" href="blog.html">Explore Lookbook</a>
+        <div class="flex flex-col sm:flex-row justify-center gap-6 mt-4">
+            <a href="store.html" class="group relative inline-flex items-center justify-center px-10 py-4 font-semibold text-white transition-all duration-300 ease-in-out bg-black border border-transparent overflow-hidden hover:-translate-y-1 hover:shadow-[0_10px_40px_rgba(255,255,255,0.2)]">
+                <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-accent via-pink-500 to-orange-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out"></span>
+                <span class="relative uppercase tracking-widest text-sm z-10">Shop Collection</span>
+            </a>
+            <a href="blog.html" class="group relative inline-flex items-center justify-center px-10 py-4 font-semibold text-white transition-all duration-300 ease-in-out border border-white/50 bg-black/30 backdrop-blur-sm overflow-hidden hover:-translate-y-1 hover:border-white hover:shadow-[0_10px_40px_rgba(255,255,255,0.15)]">
+                <span class="absolute inset-0 w-full h-full bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-500 ease-out"></span>
+                <span class="relative uppercase tracking-widest text-sm z-10 transition-colors duration-300">Explore Lookbook</span>
+            </a>
         </div>
     </div>
 </section>

@@ -29,9 +29,14 @@
     <header id="navbar-container" class="w-full transition-all duration-300"></header>
 
     <main>
-        <section class="pt-32 pb-16 px-6 max-w-screen-xl mx-auto text-center">
-            <h1 class="text-5xl md:text-7xl display-font mb-6">My Account</h1>
-            <p class="text-lg text-gray-600 font-light">Manage your profile and orders.</p>
+        <!-- Hero -->
+        <section class="relative w-full h-[300px] md:h-[400px] mt-20 mb-16">
+            <img src="assets/images/hero_wide.webp" class="absolute inset-0 w-full h-full object-cover" alt="My Account Hero">
+            <div class="absolute inset-0 bg-black/40"></div>
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-white px-6 text-center">
+                <h1 class="text-5xl md:text-7xl display-font mb-4 tracking-wide">My Account</h1>
+                <p class="text-lg text-gray-200 font-light">Manage your profile and orders.</p>
+            </div>
         </section>
 
         <section class="px-6 md:px-12 max-w-screen-2xl mx-auto mb-24 flex flex-col lg:flex-row gap-12">
@@ -218,6 +223,32 @@
                 });
             });
         </script>
+    <!-- Promotional Split Section -->
+    <section class="flex flex-col md:flex-row w-full h-[auto] md:h-[500px]">
+        <!-- Sale Section -->
+        <div class="relative w-full md:w-1/2 h-[400px] md:h-full flex flex-col justify-center items-center text-center px-8 md:px-16" style="background-image: url('assets/images/about/sale_bg.webp'); background-size: cover; background-position: center;">
+            <div class="absolute inset-0 bg-black/50"></div>
+            <div class="relative z-10 text-white max-w-lg" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-medium mb-6">Sale up to 30% Off</h2>
+                <p class="text-sm text-gray-200 mb-8 leading-relaxed">Dominion and darkness signs whales without female one air whose she'd tree forth bring face, fill, made life had had, great had you beast fifth upon.</p>
+                <a href="store.html" class="inline-flex items-center text-sm font-semibold uppercase tracking-widest hover:text-gray-300 transition group">
+                    Shop Now <span class="ml-2 transition-transform group-hover:translate-x-1">&rarr;</span>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Miss Us Section -->
+        <div class="relative w-full md:w-1/2 h-[400px] md:h-full flex flex-col justify-center items-center text-center px-8 md:px-16" style="background-image: url('assets/images/about/miss_us_bg.webp'); background-size: cover; background-position: center;">
+            <div class="absolute inset-0 bg-black/60"></div>
+            <div class="relative z-10 text-white max-w-lg" data-aos="fade-up" data-aos-delay="100">
+                <h2 class="text-3xl md:text-4xl font-medium mb-6">Did you miss us?</h2>
+                <p class="text-sm text-gray-200 mb-8 leading-relaxed">Dominion and darkness signs whales without female one air whose she'd tree forth bring face, fill, made life had had, great had you beast fifth upon.</p>
+                <a href="contact.html" class="inline-flex items-center text-sm font-semibold uppercase tracking-widest hover:text-gray-300 transition group">
+                    Contact Us <span class="ml-2 transition-transform group-hover:translate-x-1">&rarr;</span>
+                </a>
+            </div>
+        </div>
+    </section>
     </main>
 
     <footer id="footer-container" class="w-full mt-auto"></footer>
