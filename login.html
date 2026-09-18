@@ -113,6 +113,12 @@
                     const email = document.getElementById('login-email').value;
                     const role = document.querySelector('input[name="role"]:checked').value;
                     
+                    // If logging in directly with a new email, clear the stored name to show the default Welcome message
+                    if (email !== localStorage.getItem('userEmail')) {
+                        localStorage.removeItem('userFirstName');
+                        localStorage.removeItem('userLastName');
+                    }
+                    
                     // Store email in sessionStorage to display on the dashboard
                     sessionStorage.setItem('stackly_user_email', email);
                     

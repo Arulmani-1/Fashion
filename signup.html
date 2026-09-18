@@ -160,9 +160,21 @@
             }
 
             if (valid) {
+                const fname = document.getElementById('fname').value;
+                const lname = document.getElementById('lname').value;
+                const email = document.getElementById('email').value;
+                const role = document.querySelector('input[name="role"]:checked').value;
+                
+                localStorage.setItem('userFirstName', fname);
+                localStorage.setItem('userLastName', lname);
+                localStorage.setItem('userEmail', email);
+                localStorage.setItem('userRole', role);
+
                 const form = document.getElementById('signupForm');
                 gsap.to(form, {opacity: 0.5, duration: 0.3});
-                setTimeout(() => alert('Registration Successful'), 300);
+                setTimeout(() => {
+                    window.location.href = 'login.html';
+                }, 300);
             }
         }
     </script>

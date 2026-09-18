@@ -67,7 +67,7 @@
                     <img src="assets/images/logo.webp" alt="Stackly" class="h-6 w-auto">
                 </div>
                 <div class="hidden md:block">
-                    <h1 class="text-xl font-serif font-medium">Welcome back, Admin</h1>
+                    <h1 id="welcome-message" class="text-xl font-serif font-medium">Welcome back, Admin</h1>
                 </div>
                 
                 <!-- Email Display on Right Side -->
@@ -450,6 +450,14 @@
                 if(displayElem) {
                     displayElem.textContent = email;
                 }
+            }
+
+            // Set Name
+            const fname = localStorage.getItem('userFirstName');
+            const lname = localStorage.getItem('userLastName');
+            const welcomeMsg = document.getElementById('welcome-message');
+            if (welcomeMsg && fname && lname && fname.trim() !== '' && lname.trim() !== '') {
+                welcomeMsg.textContent = `Welcome back, ${fname} ${lname}`;
             }
 
             // Mobile Sidebar Toggle
