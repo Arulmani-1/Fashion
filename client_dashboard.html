@@ -28,6 +28,7 @@
             <div class="p-6 border-b border-gray-200 flex items-center justify-between">
                 <a href="#" id="sidebar-logo-link" class="inline-block hover:opacity-80 transition">
                     <img src="assets/images/logo.webp" alt="Stackly" class="h-8 w-auto">
+                    <span class="block text-[10px] text-gray-500 font-bold uppercase tracking-widest mt-2">Client Portal</span>
                 </a>
                 <button id="close-sidebar-btn" class="md:hidden text-gray-500 hover:text-black">
                     <i class="fas fa-times text-xl"></i>
@@ -76,10 +77,11 @@
             </header>
 
             <!-- Content Area -->
-            <div class="flex-1 overflow-y-auto p-6 md:p-10 bg-offwhite relative">
+            <div id="main-scroll-container" class="flex-1 overflow-y-auto p-6 md:p-10 bg-offwhite relative">
                 
                 <!-- Dashboard Section -->
                 <div id="section-dashboard" class="content-section">
+                    <h2 id="mobile-welcome-message" class="text-xl font-serif font-medium mb-6 block md:hidden">Welcome back, Client</h2>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                         <!-- Cards -->
                         <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
@@ -111,7 +113,7 @@
                     <div class="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
                         <div class="px-6 py-5 border-b border-gray-200 flex items-center justify-between">
                             <h3 class="text-lg font-medium">Recent Orders</h3>
-                            <a href="#" class="text-sm text-gray-500 hover:text-black border-b border-transparent hover:border-black transition">View All</a>
+                            <a href="404.html" class="text-sm text-gray-500 hover:text-black border-b border-transparent hover:border-black transition">View All</a>
                         </div>
                         <div class="overflow-x-auto">
                             <table class="w-full text-left text-sm whitespace-nowrap">
@@ -130,35 +132,35 @@
                                         <td class="px-6 py-4 text-gray-600">Sep 15, 2026</td>
                                         <td class="px-6 py-4 font-medium text-black">$245.00</td>
                                         <td class="px-6 py-4"><span class="px-2 py-1 bg-green-100 text-green-700 rounded text-[10px] font-bold uppercase tracking-wider">Delivered</span></td>
-                                        <td class="px-6 py-4 text-right"><button class="text-gray-400 hover:text-black transition"><i class="far fa-eye"></i></button></td>
+                                        <td class="px-6 py-4 text-right"><button onclick="window.location.href='404.html'" class="text-gray-400 hover:text-black transition"><i class="far fa-eye"></i></button></td>
                                     </tr>
                                     <tr class="hover:bg-gray-50">
                                         <td class="px-6 py-4 font-medium text-black">#ORD-5890</td>
                                         <td class="px-6 py-4 text-gray-600">Sep 02, 2026</td>
                                         <td class="px-6 py-4 font-medium text-black">$85.50</td>
                                         <td class="px-6 py-4"><span class="px-2 py-1 bg-green-100 text-green-700 rounded text-[10px] font-bold uppercase tracking-wider">Delivered</span></td>
-                                        <td class="px-6 py-4 text-right"><button class="text-gray-400 hover:text-black transition"><i class="far fa-eye"></i></button></td>
+                                        <td class="px-6 py-4 text-right"><button onclick="window.location.href='404.html'" class="text-gray-400 hover:text-black transition"><i class="far fa-eye"></i></button></td>
                                     </tr>
                                     <tr class="hover:bg-gray-50">
                                         <td class="px-6 py-4 font-medium text-black">#ORD-5744</td>
                                         <td class="px-6 py-4 text-gray-600">Aug 21, 2026</td>
                                         <td class="px-6 py-4 font-medium text-black">$420.00</td>
                                         <td class="px-6 py-4"><span class="px-2 py-1 bg-green-100 text-green-700 rounded text-[10px] font-bold uppercase tracking-wider">Delivered</span></td>
-                                        <td class="px-6 py-4 text-right"><button class="text-gray-400 hover:text-black transition"><i class="far fa-eye"></i></button></td>
+                                        <td class="px-6 py-4 text-right"><button onclick="window.location.href='404.html'" class="text-gray-400 hover:text-black transition"><i class="far fa-eye"></i></button></td>
                                     </tr>
                                     <tr class="hover:bg-gray-50">
                                         <td class="px-6 py-4 font-medium text-black">#ORD-5612</td>
                                         <td class="px-6 py-4 text-gray-600">Jul 11, 2026</td>
                                         <td class="px-6 py-4 font-medium text-black">$120.00</td>
                                         <td class="px-6 py-4"><span class="px-2 py-1 bg-gray-100 text-gray-600 rounded text-[10px] font-bold uppercase tracking-wider">Returned</span></td>
-                                        <td class="px-6 py-4 text-right"><button class="text-gray-400 hover:text-black transition"><i class="far fa-eye"></i></button></td>
+                                        <td class="px-6 py-4 text-right"><button onclick="window.location.href='404.html'" class="text-gray-400 hover:text-black transition"><i class="far fa-eye"></i></button></td>
                                     </tr>
                                     <tr class="hover:bg-gray-50">
                                         <td class="px-6 py-4 font-medium text-black">#ORD-5501</td>
                                         <td class="px-6 py-4 text-gray-600">Jun 30, 2026</td>
                                         <td class="px-6 py-4 font-medium text-black">$89.99</td>
                                         <td class="px-6 py-4"><span class="px-2 py-1 bg-green-100 text-green-700 rounded text-[10px] font-bold uppercase tracking-wider">Delivered</span></td>
-                                        <td class="px-6 py-4 text-right"><button class="text-gray-400 hover:text-black transition"><i class="far fa-eye"></i></button></td>
+                                        <td class="px-6 py-4 text-right"><button onclick="window.location.href='404.html'" class="text-gray-400 hover:text-black transition"><i class="far fa-eye"></i></button></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -196,7 +198,7 @@
                                         <td class="px-6 py-4 text-gray-600">3 Items</td>
                                         <td class="px-6 py-4 font-medium text-black">$245.00</td>
                                         <td class="px-6 py-4"><span class="px-2 py-1 bg-green-100 text-green-700 rounded text-[10px] font-bold uppercase tracking-wider">Delivered</span></td>
-                                        <td class="px-6 py-4 text-right"><button class="text-accent font-medium text-xs hover:underline">Track</button></td>
+                                        <td class="px-6 py-4 text-right"><button onclick="window.location.href='404.html'" class="text-accent font-medium text-xs hover:underline">Track</button></td>
                                     </tr>
                                     <tr class="hover:bg-gray-50">
                                         <td class="px-6 py-4 font-medium text-black">#ORD-5890</td>
@@ -204,7 +206,7 @@
                                         <td class="px-6 py-4 text-gray-600">1 Item</td>
                                         <td class="px-6 py-4 font-medium text-black">$85.50</td>
                                         <td class="px-6 py-4"><span class="px-2 py-1 bg-green-100 text-green-700 rounded text-[10px] font-bold uppercase tracking-wider">Delivered</span></td>
-                                        <td class="px-6 py-4 text-right"><button class="text-gray-400 font-medium text-xs hover:text-black hover:underline">View Invoice</button></td>
+                                        <td class="px-6 py-4 text-right"><button onclick="window.location.href='404.html'" class="text-gray-400 font-medium text-xs hover:text-black hover:underline">View Invoice</button></td>
                                     </tr>
                                     <tr class="hover:bg-gray-50">
                                         <td class="px-6 py-4 font-medium text-black">#ORD-5744</td>
@@ -212,7 +214,7 @@
                                         <td class="px-6 py-4 text-gray-600">5 Items</td>
                                         <td class="px-6 py-4 font-medium text-black">$420.00</td>
                                         <td class="px-6 py-4"><span class="px-2 py-1 bg-green-100 text-green-700 rounded text-[10px] font-bold uppercase tracking-wider">Delivered</span></td>
-                                        <td class="px-6 py-4 text-right"><button class="text-gray-400 font-medium text-xs hover:text-black hover:underline">View Invoice</button></td>
+                                        <td class="px-6 py-4 text-right"><button onclick="window.location.href='404.html'" class="text-gray-400 font-medium text-xs hover:text-black hover:underline">View Invoice</button></td>
                                     </tr>
                                     <tr class="hover:bg-gray-50">
                                         <td class="px-6 py-4 font-medium text-black">#ORD-5612</td>
@@ -220,7 +222,7 @@
                                         <td class="px-6 py-4 text-gray-600">2 Items</td>
                                         <td class="px-6 py-4 font-medium text-black">$120.00</td>
                                         <td class="px-6 py-4"><span class="px-2 py-1 bg-gray-100 text-gray-600 rounded text-[10px] font-bold uppercase tracking-wider">Returned</span></td>
-                                        <td class="px-6 py-4 text-right"><button class="text-gray-400 font-medium text-xs hover:text-black hover:underline">View Invoice</button></td>
+                                        <td class="px-6 py-4 text-right"><button onclick="window.location.href='404.html'" class="text-gray-400 font-medium text-xs hover:text-black hover:underline">View Invoice</button></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -236,7 +238,7 @@
                         <div class="bg-white border border-gray-200 rounded-lg overflow-hidden group">
                             <div class="relative h-64 overflow-hidden bg-gray-100">
                                 <img src="assets/images/shop_look_prod_1.webp" alt="Wishlist Item" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                                <button class="absolute top-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center text-accent hover:bg-accent hover:text-white transition shadow">
+                                <button class="absolute top-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center text-accent hover:bg-accent hover:text-white transition shadow" onclick="window.location.href='404.html'">
                                     <i class="fas fa-heart"></i>
                                 </button>
                             </div>
@@ -245,7 +247,7 @@
                                 <h3 class="text-sm font-medium text-black mb-2 truncate">Floral Summer Dress</h3>
                                 <div class="flex items-center justify-between">
                                     <p class="font-semibold text-sm">$89.99</p>
-                                    <button class="text-xs uppercase font-semibold text-black border-b border-black hover:text-accent hover:border-accent transition">Add to Cart</button>
+                                    <button onclick="window.location.href='404.html'" class="text-xs uppercase font-semibold text-black border-b border-black hover:text-accent hover:border-accent transition">Add to Cart</button>
                                 </div>
                             </div>
                         </div>
@@ -253,7 +255,7 @@
                         <div class="bg-white border border-gray-200 rounded-lg overflow-hidden group">
                             <div class="relative h-64 overflow-hidden bg-gray-100">
                                 <img src="assets/images/shop_look_prod_2.webp" alt="Wishlist Item" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                                <button class="absolute top-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center text-accent hover:bg-accent hover:text-white transition shadow">
+                                <button class="absolute top-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center text-accent hover:bg-accent hover:text-white transition shadow" onclick="window.location.href='404.html'">
                                     <i class="fas fa-heart"></i>
                                 </button>
                             </div>
@@ -262,7 +264,7 @@
                                 <h3 class="text-sm font-medium text-black mb-2 truncate">Leather Crossbody Bag</h3>
                                 <div class="flex items-center justify-between">
                                     <p class="font-semibold text-sm">$120.00</p>
-                                    <button class="text-xs uppercase font-semibold text-black border-b border-black hover:text-accent hover:border-accent transition">Add to Cart</button>
+                                    <button onclick="window.location.href='404.html'" class="text-xs uppercase font-semibold text-black border-b border-black hover:text-accent hover:border-accent transition">Add to Cart</button>
                                 </div>
                             </div>
                         </div>
@@ -270,7 +272,7 @@
                         <div class="bg-white border border-gray-200 rounded-lg overflow-hidden group">
                             <div class="relative h-64 overflow-hidden bg-gray-100">
                                 <img src="assets/images/shop_look_prod_3.webp" alt="Wishlist Item" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                                <button class="absolute top-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center text-accent hover:bg-accent hover:text-white transition shadow">
+                                <button class="absolute top-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center text-accent hover:bg-accent hover:text-white transition shadow" onclick="window.location.href='404.html'">
                                     <i class="fas fa-heart"></i>
                                 </button>
                             </div>
@@ -279,7 +281,7 @@
                                 <h3 class="text-sm font-medium text-black mb-2 truncate">Silk Wrap Blouse</h3>
                                 <div class="flex items-center justify-between">
                                     <p class="font-semibold text-sm">$65.00</p>
-                                    <button class="text-xs uppercase font-semibold text-black border-b border-black hover:text-accent hover:border-accent transition">Add to Cart</button>
+                                    <button onclick="window.location.href='404.html'" class="text-xs uppercase font-semibold text-black border-b border-black hover:text-accent hover:border-accent transition">Add to Cart</button>
                                 </div>
                             </div>
                         </div>
@@ -287,7 +289,7 @@
                         <div class="bg-white border border-gray-200 rounded-lg overflow-hidden group">
                             <div class="relative h-64 overflow-hidden bg-gray-100">
                                 <img src="assets/images/shop_accessories.webp" alt="Wishlist Item" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                                <button class="absolute top-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center text-accent hover:bg-accent hover:text-white transition shadow">
+                                <button class="absolute top-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center text-accent hover:bg-accent hover:text-white transition shadow" onclick="window.location.href='404.html'">
                                     <i class="fas fa-heart"></i>
                                 </button>
                             </div>
@@ -296,7 +298,7 @@
                                 <h3 class="text-sm font-medium text-black mb-2 truncate">Classic Gold Necklace</h3>
                                 <div class="flex items-center justify-between">
                                     <p class="font-semibold text-sm">$149.99</p>
-                                    <button class="text-xs uppercase font-semibold text-black border-b border-black hover:text-accent hover:border-accent transition">Add to Cart</button>
+                                    <button onclick="window.location.href='404.html'" class="text-xs uppercase font-semibold text-black border-b border-black hover:text-accent hover:border-accent transition">Add to Cart</button>
                                 </div>
                             </div>
                         </div>
@@ -329,7 +331,7 @@
                                     <label class="block text-xs font-medium text-gray-700 mb-1">Phone Number</label>
                                     <input type="text" class="w-full border border-gray-300 p-2 text-sm rounded focus:border-black outline-none" value="+1 (555) 123-4567">
                                 </div>
-                                <button type="button" class="bg-black text-white px-6 py-2 text-sm font-semibold uppercase mt-4 hover:bg-accent transition w-full">Update Profile</button>
+                                <button onclick="window.location.href='404.html'" type="button" class="bg-black text-white px-6 py-2 text-sm font-semibold uppercase mt-4 hover:bg-accent transition w-full">Update Profile</button>
                             </form>
                         </div>
 
@@ -348,7 +350,7 @@
                                     <label class="block text-xs font-medium text-gray-700 mb-1">Confirm New Password</label>
                                     <input type="password" class="w-full border border-gray-300 p-2 text-sm rounded focus:border-black outline-none" placeholder="Confirm new password">
                                 </div>
-                                <button type="button" class="border border-black text-black px-6 py-2 text-sm font-semibold uppercase mt-4 hover:bg-black hover:text-white transition w-full">Change Password</button>
+                                <button onclick="window.location.href='404.html'" type="button" class="border border-black text-black px-6 py-2 text-sm font-semibold uppercase mt-4 hover:bg-black hover:text-white transition w-full">Change Password</button>
                             </form>
                         </div>
                     </div>
@@ -375,7 +377,15 @@
             const lname = localStorage.getItem('userLastName');
             const welcomeMsg = document.getElementById('welcome-message');
             if (welcomeMsg && fname && lname && fname.trim() !== '' && lname.trim() !== '') {
-                welcomeMsg.textContent = `Welcome back, ${fname} ${lname}`;
+                
+                if (welcomeMsg) {
+                    welcomeMsg.textContent = `Welcome back, ${fname} ${lname}`;
+                }
+                const mobileWelcomeMsg = document.getElementById('mobile-welcome-message');
+                if (mobileWelcomeMsg) {
+                    mobileWelcomeMsg.textContent = `Welcome back, ${fname} ${lname}`;
+                }
+
             }
 
             // Handle Logo Click to show Dashboard
@@ -396,9 +406,11 @@
             if (mobileMenuBtn && sidebar && closeSidebarBtn) {
                 mobileMenuBtn.addEventListener('click', () => {
                     sidebar.classList.remove('-translate-x-full');
+                    const scrollEl = document.getElementById('main-scroll-container'); if(scrollEl) scrollEl.style.overflow = 'hidden';
                 });
                 closeSidebarBtn.addEventListener('click', () => {
                     sidebar.classList.add('-translate-x-full');
+                    const scrollEl = document.getElementById('main-scroll-container'); if(scrollEl) scrollEl.style.overflow = '';
                 });
             }
 
@@ -435,12 +447,30 @@
                     // 4. Close sidebar on mobile after clicking
                     if (window.innerWidth < 768 && sidebar) {
                         sidebar.classList.add('-translate-x-full');
+                        const scrollEl = document.getElementById('main-scroll-container'); if(scrollEl) scrollEl.style.overflow = '';
                     }
                 });
+            });
+
+            // Fix stuck scroll when resizing to desktop
+            window.addEventListener('resize', () => {
+                if (window.innerWidth >= 768) {
+                    const scrollEl = document.getElementById('main-scroll-container');
+                    if(scrollEl) scrollEl.style.overflow = '';
+                }
             });
         });
     </script>
     <style>
+        /* Hide scrollbar universally */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        * {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }

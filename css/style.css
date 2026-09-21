@@ -212,3 +212,66 @@ h1, h2, h3, h4, h5, h6, .display-font {
   object-fit: cover;
   z-index: -1;
 }
+
+/* Card Hover Lift Effect */
+.product-card, .service-card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.product-card:hover, .service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+}
+
+/* Card Border Draw Effect */
+.product-card, .service-card {
+  position: relative;
+}
+.product-card::before, .product-card::after,
+.service-card::before, .service-card::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  pointer-events: none;
+  z-index: 10;
+}
+.product-card::before, .service-card::before {
+  top: 0;
+  left: 0;
+}
+.product-card::after, .service-card::after {
+  bottom: 0;
+  right: 0;
+}
+.product-card:hover::before, .service-card:hover::before {
+  width: 100%;
+  height: 100%;
+  border-top-color: var(--color-black);
+  border-right-color: var(--color-black);
+  transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+}
+.product-card:hover::after, .service-card:hover::after {
+  width: 100%;
+  height: 100%;
+  border-bottom-color: var(--color-black);
+  border-left-color: var(--color-black);
+  transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+}
+
+/* Button Embossed Slide Down Effect */
+.btn-stackly, .btn-outline, a.btn, input[type="submit"], .btn-load-more {
+  box-shadow: 0 5px 0px rgba(0, 0, 0, 0.2), 0 10px 15px rgba(0,0,0,0.1) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, color 0.5s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease !important;
+  transform: translateY(0);
+}
+.btn-stackly:hover, .btn-outline:hover, a.btn:hover, input[type="submit"]:hover, .btn-load-more:hover {
+  box-shadow: 0 2px 0px rgba(0, 0, 0, 0.2), 0 5px 8px rgba(0,0,0,0.1) !important;
+  transform: translateY(3px);
+}
+.btn-stackly:active, .btn-outline:active, a.btn:active, input[type="submit"]:active, .btn-load-more:active {
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0,0,0,0.1) !important;
+  transform: translateY(5px);
+}
+

@@ -28,6 +28,7 @@
             <div class="p-6 border-b border-gray-200 flex items-center justify-between">
                 <a href="#" id="sidebar-logo-link" class="inline-block hover:opacity-80 transition">
                     <img src="assets/images/logo.webp" alt="Stackly" class="h-8 w-auto">
+                    <span class="block text-[10px] text-gray-500 font-bold uppercase tracking-widest mt-2">Admin Portal</span>
                 </a>
                 <button id="close-sidebar-btn" class="md:hidden text-gray-500 hover:text-black">
                     <i class="fas fa-times text-xl"></i>
@@ -79,10 +80,11 @@
             </header>
 
             <!-- Content Area -->
-            <div class="flex-1 overflow-y-auto p-6 md:p-10 bg-gray-50 relative">
+            <div id="main-scroll-container" class="flex-1 overflow-y-auto p-6 md:p-10 bg-gray-50 relative">
                 
                 <!-- Dashboard Section -->
                 <div id="section-dashboard" class="content-section">
+                    <h2 id="mobile-welcome-message" class="text-xl font-serif font-medium mb-6 block md:hidden">Welcome back, Admin</h2>
                     <!-- Metrics -->
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
                         <!-- Card 1 -->
@@ -130,7 +132,7 @@
                     <div class="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
                         <div class="px-6 py-5 border-b border-gray-200 flex items-center justify-between">
                             <h3 class="text-lg font-semibold text-gray-800">Recent Transactions</h3>
-                            <button class="text-sm font-medium text-accent hover:text-black transition">View All</button>
+                            <button class="text-sm font-medium text-accent hover:text-black transition" onclick="window.location.href='404.html'">View All</button>
                         </div>
                         <div class="overflow-x-auto">
                             <table class="w-full text-left text-sm whitespace-nowrap">
@@ -198,7 +200,7 @@
                 <div id="section-customers" class="content-section hidden">
                     <div class="flex items-center justify-between mb-6">
                         <h2 class="text-2xl font-semibold">Customer Management</h2>
-                        <button class="bg-black text-white px-4 py-2 rounded text-sm font-medium hover:bg-accent transition"><i class="fas fa-plus mr-2"></i> Add Customer</button>
+                        <button onclick="window.location.href='404.html'" class="bg-black text-white px-4 py-2 rounded text-sm font-medium hover:bg-accent transition"><i class="fas fa-plus mr-2"></i> Add Customer</button>
                     </div>
                     <div class="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
                         <div class="px-6 py-4 border-b border-gray-200 flex justify-between items-center bg-gray-50">
@@ -228,8 +230,8 @@
                                         <td class="px-6 py-4">12</td>
                                         <td class="px-6 py-4 font-medium">$1,250.00</td>
                                         <td class="px-6 py-4 text-right">
-                                            <button class="text-gray-400 hover:text-accent mx-1"><i class="fas fa-edit"></i></button>
-                                            <button class="text-gray-400 hover:text-red-500 mx-1"><i class="fas fa-trash"></i></button>
+                                            <button class="text-gray-400 hover:text-accent mx-1" onclick="window.location.href='404.html'"><i class="fas fa-edit"></i></button>
+                                            <button class="text-gray-400 hover:text-red-500 mx-1" onclick="window.location.href='404.html'"><i class="fas fa-trash"></i></button>
                                         </td>
                                     </tr>
                                     <tr class="hover:bg-gray-50">
@@ -241,8 +243,8 @@
                                         <td class="px-6 py-4">4</td>
                                         <td class="px-6 py-4 font-medium">$450.00</td>
                                         <td class="px-6 py-4 text-right">
-                                            <button class="text-gray-400 hover:text-accent mx-1"><i class="fas fa-edit"></i></button>
-                                            <button class="text-gray-400 hover:text-red-500 mx-1"><i class="fas fa-trash"></i></button>
+                                            <button class="text-gray-400 hover:text-accent mx-1" onclick="window.location.href='404.html'"><i class="fas fa-edit"></i></button>
+                                            <button class="text-gray-400 hover:text-red-500 mx-1" onclick="window.location.href='404.html'"><i class="fas fa-trash"></i></button>
                                         </td>
                                     </tr>
                                     <tr class="hover:bg-gray-50">
@@ -254,8 +256,8 @@
                                         <td class="px-6 py-4">1</td>
                                         <td class="px-6 py-4 font-medium">$85.50</td>
                                         <td class="px-6 py-4 text-right">
-                                            <button class="text-gray-400 hover:text-accent mx-1"><i class="fas fa-edit"></i></button>
-                                            <button class="text-gray-400 hover:text-red-500 mx-1"><i class="fas fa-trash"></i></button>
+                                            <button class="text-gray-400 hover:text-accent mx-1" onclick="window.location.href='404.html'"><i class="fas fa-edit"></i></button>
+                                            <button class="text-gray-400 hover:text-red-500 mx-1" onclick="window.location.href='404.html'"><i class="fas fa-trash"></i></button>
                                         </td>
                                     </tr>
                                     <tr class="hover:bg-gray-50">
@@ -267,8 +269,8 @@
                                         <td class="px-6 py-4">7</td>
                                         <td class="px-6 py-4 font-medium">$620.00</td>
                                         <td class="px-6 py-4 text-right">
-                                            <button class="text-gray-400 hover:text-accent mx-1"><i class="fas fa-edit"></i></button>
-                                            <button class="text-gray-400 hover:text-red-500 mx-1"><i class="fas fa-trash"></i></button>
+                                            <button class="text-gray-400 hover:text-accent mx-1" onclick="window.location.href='404.html'"><i class="fas fa-edit"></i></button>
+                                            <button class="text-gray-400 hover:text-red-500 mx-1" onclick="window.location.href='404.html'"><i class="fas fa-trash"></i></button>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -307,7 +309,7 @@
                                         <td class="px-6 py-4">Mary Smith</td>
                                         <td class="px-6 py-4 font-medium">$1,200.00</td>
                                         <td class="px-6 py-4"><span class="px-2 py-1 bg-yellow-100 text-yellow-700 rounded-full text-[10px] font-bold uppercase tracking-wider">Processing</span></td>
-                                        <td class="px-6 py-4 text-right"><button class="text-accent font-medium text-xs hover:underline">Manage</button></td>
+                                        <td class="px-6 py-4 text-right"><button class="text-accent font-medium text-xs hover:underline" onclick="window.location.href='404.html'">Manage</button></td>
                                     </tr>
                                     <tr class="hover:bg-gray-50">
                                         <td class="px-6 py-4 font-medium text-black">#ORD-9820</td>
@@ -315,7 +317,7 @@
                                         <td class="px-6 py-4">John Doe</td>
                                         <td class="px-6 py-4 font-medium">$250.00</td>
                                         <td class="px-6 py-4"><span class="px-2 py-1 bg-green-100 text-green-700 rounded-full text-[10px] font-bold uppercase tracking-wider">Completed</span></td>
-                                        <td class="px-6 py-4 text-right"><button class="text-accent font-medium text-xs hover:underline">Manage</button></td>
+                                        <td class="px-6 py-4 text-right"><button class="text-accent font-medium text-xs hover:underline" onclick="window.location.href='404.html'">Manage</button></td>
                                     </tr>
                                     <tr class="hover:bg-gray-50">
                                         <td class="px-6 py-4 font-medium text-black">#ORD-9819</td>
@@ -323,7 +325,7 @@
                                         <td class="px-6 py-4">Linda Williams</td>
                                         <td class="px-6 py-4 font-medium">$850.50</td>
                                         <td class="px-6 py-4"><span class="px-2 py-1 bg-red-100 text-red-700 rounded-full text-[10px] font-bold uppercase tracking-wider">Failed</span></td>
-                                        <td class="px-6 py-4 text-right"><button class="text-accent font-medium text-xs hover:underline">Manage</button></td>
+                                        <td class="px-6 py-4 text-right"><button class="text-accent font-medium text-xs hover:underline" onclick="window.location.href='404.html'">Manage</button></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -335,7 +337,7 @@
                 <div id="section-products" class="content-section hidden">
                     <div class="flex items-center justify-between mb-6">
                         <h2 class="text-2xl font-semibold">Product Inventory</h2>
-                        <button class="bg-black text-white px-4 py-2 rounded text-sm font-medium hover:bg-accent transition"><i class="fas fa-plus mr-2"></i> Add Product</button>
+                        <button onclick="window.location.href='404.html'" class="bg-black text-white px-4 py-2 rounded text-sm font-medium hover:bg-accent transition"><i class="fas fa-plus mr-2"></i> Add Product</button>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm flex space-x-4">
@@ -433,7 +435,7 @@
                                 </div>
                             </div>
 
-                            <button type="button" class="bg-black text-white px-6 py-2 rounded text-sm font-semibold hover:bg-accent transition">Save Settings</button>
+                            <button type="button" class="bg-black text-white px-6 py-2 rounded text-sm font-semibold hover:bg-accent transition" onclick="window.location.href='404.html'">Save Settings</button>
                         </form>
                     </div>
                 </div>
@@ -459,7 +461,15 @@
             const lname = localStorage.getItem('userLastName');
             const welcomeMsg = document.getElementById('welcome-message');
             if (welcomeMsg && fname && lname && fname.trim() !== '' && lname.trim() !== '') {
-                welcomeMsg.textContent = `Welcome back, ${fname} ${lname}`;
+                
+                if (welcomeMsg) {
+                    welcomeMsg.textContent = `Welcome back, ${fname} ${lname}`;
+                }
+                const mobileWelcomeMsg = document.getElementById('mobile-welcome-message');
+                if (mobileWelcomeMsg) {
+                    mobileWelcomeMsg.textContent = `Welcome back, ${fname} ${lname}`;
+                }
+
             }
 
             // Handle Logo Click to show Dashboard
@@ -480,9 +490,11 @@
             if (mobileMenuBtn && sidebar && closeSidebarBtn) {
                 mobileMenuBtn.addEventListener('click', () => {
                     sidebar.classList.remove('-translate-x-full');
+                    const scrollEl = document.getElementById('main-scroll-container'); if(scrollEl) scrollEl.style.overflow = 'hidden';
                 });
                 closeSidebarBtn.addEventListener('click', () => {
                     sidebar.classList.add('-translate-x-full');
+                    const scrollEl = document.getElementById('main-scroll-container'); if(scrollEl) scrollEl.style.overflow = '';
                 });
             }
 
@@ -518,12 +530,30 @@
                     // 4. Close sidebar on mobile after clicking
                     if (window.innerWidth < 768 && sidebar) {
                         sidebar.classList.add('-translate-x-full');
+                        const scrollEl = document.getElementById('main-scroll-container'); if(scrollEl) scrollEl.style.overflow = '';
                     }
                 });
+            });
+
+            // Fix stuck scroll when resizing to desktop
+            window.addEventListener('resize', () => {
+                if (window.innerWidth >= 768) {
+                    const scrollEl = document.getElementById('main-scroll-container');
+                    if(scrollEl) scrollEl.style.overflow = '';
+                }
             });
         });
     </script>
     <style>
+        /* Hide scrollbar universally */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        * {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
