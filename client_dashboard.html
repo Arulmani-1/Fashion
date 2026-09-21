@@ -337,20 +337,20 @@
 
                         <div class="bg-white p-8 border border-gray-200 rounded-lg shadow-sm">
                             <h3 class="font-medium text-lg mb-4 border-b pb-2">Change Password</h3>
-                            <form class="space-y-4">
+                            <form class="space-y-4" onsubmit="event.preventDefault(); window.location.href='404.html';">
                                 <div>
                                     <label class="block text-xs font-medium text-gray-700 mb-1">Current Password</label>
-                                    <input type="password" class="w-full border border-gray-300 p-2 text-sm rounded focus:border-black outline-none" placeholder="••••••••">
+                                    <input type="password" required class="w-full border border-gray-300 p-2 text-sm rounded focus:border-black outline-none" placeholder="••••••••">
                                 </div>
                                 <div>
                                     <label class="block text-xs font-medium text-gray-700 mb-1">New Password</label>
-                                    <input type="password" class="w-full border border-gray-300 p-2 text-sm rounded focus:border-black outline-none" placeholder="Enter new password">
+                                    <input type="password" required class="w-full border border-gray-300 p-2 text-sm rounded focus:border-black outline-none" placeholder="Enter new password">
                                 </div>
                                 <div>
                                     <label class="block text-xs font-medium text-gray-700 mb-1">Confirm New Password</label>
-                                    <input type="password" class="w-full border border-gray-300 p-2 text-sm rounded focus:border-black outline-none" placeholder="Confirm new password">
+                                    <input type="password" required class="w-full border border-gray-300 p-2 text-sm rounded focus:border-black outline-none" placeholder="Confirm new password">
                                 </div>
-                                <button onclick="window.location.href='404.html'" type="button" class="border border-black text-black px-6 py-2 text-sm font-semibold uppercase mt-4 hover:bg-black hover:text-white transition w-full">Change Password</button>
+                                <button type="submit" class="border border-black text-black px-6 py-2 text-sm font-semibold uppercase mt-4 hover:bg-black hover:text-white transition w-full">Change Password</button>
                             </form>
                         </div>
                     </div>
