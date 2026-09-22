@@ -19,6 +19,52 @@
             }
         }
     </script>
+    <style>
+        .border-draw-effect {
+            position: relative;
+        }
+        .border-draw-effect::before,
+        .border-draw-effect::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            box-sizing: border-box;
+            border-radius: 0.5rem;
+            pointer-events: none;
+        }
+        .border-draw-effect::before {
+            top: 0;
+            left: 0;
+            border-top: 2px solid transparent;
+            border-right: 2px solid transparent;
+        }
+        .border-draw-effect::after {
+            bottom: 0;
+            right: 0;
+            border-bottom: 2px solid transparent;
+            border-left: 2px solid transparent;
+        }
+        .border-draw-effect:hover::before,
+        .border-draw-effect:hover::after,
+        .border-draw-effect.active::before,
+        .border-draw-effect.active::after {
+            width: 100%;
+            height: 100%;
+        }
+        .border-draw-effect:hover::before,
+        .border-draw-effect.active::before {
+            border-top-color: #7f2a4f;
+            border-right-color: #7f2a4f;
+            transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+        }
+        .border-draw-effect:hover::after,
+        .border-draw-effect.active::after {
+            border-bottom-color: #7f2a4f;
+            border-left-color: #7f2a4f;
+            transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+        }
+    </style>
 </head>
 <body class="bg-gray-100 text-black font-sans antialiased">
     <div class="flex h-screen overflow-hidden">
@@ -340,7 +386,7 @@
                         <button onclick="window.location.href='404.html'" class="bg-black text-white px-4 py-2 rounded text-sm font-medium hover:bg-accent transition"><i class="fas fa-plus mr-2"></i> Add Product</button>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm flex space-x-4">
+                        <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm flex space-x-4 border-draw-effect cursor-pointer" onclick="this.classList.toggle('active')">
                             <img src="assets/images/shop_look_prod_1.webp" alt="Product" class="w-20 h-20 object-cover rounded bg-gray-100">
                             <div class="flex-1">
                                 <h3 class="font-semibold text-sm mb-1 text-gray-900">Floral Summer Dress</h3>
@@ -351,7 +397,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm flex space-x-4">
+                        <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm flex space-x-4 border-draw-effect cursor-pointer" onclick="this.classList.toggle('active')">
                             <img src="assets/images/shop_look_prod_2.webp" alt="Product" class="w-20 h-20 object-cover rounded bg-gray-100">
                             <div class="flex-1">
                                 <h3 class="font-semibold text-sm mb-1 text-gray-900">Leather Crossbody Bag</h3>
@@ -362,7 +408,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm flex space-x-4">
+                        <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm flex space-x-4 border-draw-effect cursor-pointer" onclick="this.classList.toggle('active')">
                             <img src="assets/images/shop_look_prod_3.webp" alt="Product" class="w-20 h-20 object-cover rounded bg-gray-100">
                             <div class="flex-1">
                                 <h3 class="font-semibold text-sm mb-1 text-gray-900">Silk Wrap Blouse</h3>
@@ -373,7 +419,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm flex space-x-4">
+                        <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm flex space-x-4 border-draw-effect cursor-pointer" onclick="this.classList.toggle('active')">
                             <img src="assets/images/shop_accessories.webp" alt="Product" class="w-20 h-20 object-cover rounded bg-gray-100">
                             <div class="flex-1">
                                 <h3 class="font-semibold text-sm mb-1 text-gray-900">Classic Gold Necklace</h3>
@@ -384,7 +430,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm flex space-x-4">
+                        <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm flex space-x-4 border-draw-effect cursor-pointer" onclick="this.classList.toggle('active')">
                             <img src="assets/images/womens.webp" alt="Product" class="w-20 h-20 object-cover rounded bg-gray-100">
                             <div class="flex-1">
                                 <h3 class="font-semibold text-sm mb-1 text-gray-900">Elegant Evening Gown</h3>
