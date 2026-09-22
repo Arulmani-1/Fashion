@@ -284,10 +284,10 @@
                     <h2 class="text-2xl font-semibold mb-6">All Orders</h2>
                     <div class="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
                         <div class="px-6 py-4 border-b border-gray-200 flex justify-between items-center bg-gray-50">
-                            <div class="flex space-x-2">
-                                <button class="px-3 py-1 bg-white border border-gray-300 rounded text-xs font-medium text-gray-700 hover:bg-gray-50">All</button>
-                                <button class="px-3 py-1 bg-white border border-gray-300 rounded text-xs font-medium text-gray-700 hover:bg-gray-50">Pending</button>
-                                <button class="px-3 py-1 bg-white border border-gray-300 rounded text-xs font-medium text-gray-700 hover:bg-gray-50">Completed</button>
+                            <div class="flex space-x-2" id="order-filters">
+                                <button data-filter="all" class="order-filter-btn px-3 py-1 bg-gray-200 border border-gray-300 rounded text-xs font-medium text-gray-800">All</button>
+                                <button data-filter="processing" class="order-filter-btn px-3 py-1 bg-white border border-gray-300 rounded text-xs font-medium text-gray-700 hover:bg-gray-50">Pending</button>
+                                <button data-filter="completed" class="order-filter-btn px-3 py-1 bg-white border border-gray-300 rounded text-xs font-medium text-gray-700 hover:bg-gray-50">Completed</button>
                             </div>
                         </div>
                         <div class="overflow-x-auto">
@@ -302,8 +302,8 @@
                                         <th class="px-6 py-4 font-medium uppercase text-[10px] tracking-wider text-right">Action</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y divide-gray-100 text-gray-700">
-                                    <tr class="hover:bg-gray-50">
+                                <tbody id="orders-tbody" class="divide-y divide-gray-100 text-gray-700">
+                                    <tr class="hover:bg-gray-50 order-row" data-status="processing">
                                         <td class="px-6 py-4 font-medium text-black">#ORD-9821</td>
                                         <td class="px-6 py-4">Sep 16, 2026</td>
                                         <td class="px-6 py-4">Mary Smith</td>
@@ -311,7 +311,7 @@
                                         <td class="px-6 py-4"><span class="px-2 py-1 bg-yellow-100 text-yellow-700 rounded-full text-[10px] font-bold uppercase tracking-wider">Processing</span></td>
                                         <td class="px-6 py-4 text-right"><button class="text-accent font-medium text-xs hover:underline" onclick="window.location.href='404.html'">Manage</button></td>
                                     </tr>
-                                    <tr class="hover:bg-gray-50">
+                                    <tr class="hover:bg-gray-50 order-row" data-status="completed">
                                         <td class="px-6 py-4 font-medium text-black">#ORD-9820</td>
                                         <td class="px-6 py-4">Sep 16, 2026</td>
                                         <td class="px-6 py-4">John Doe</td>
@@ -319,7 +319,7 @@
                                         <td class="px-6 py-4"><span class="px-2 py-1 bg-green-100 text-green-700 rounded-full text-[10px] font-bold uppercase tracking-wider">Completed</span></td>
                                         <td class="px-6 py-4 text-right"><button class="text-accent font-medium text-xs hover:underline" onclick="window.location.href='404.html'">Manage</button></td>
                                     </tr>
-                                    <tr class="hover:bg-gray-50">
+                                    <tr class="hover:bg-gray-50 order-row" data-status="failed">
                                         <td class="px-6 py-4 font-medium text-black">#ORD-9819</td>
                                         <td class="px-6 py-4">Sep 14, 2026</td>
                                         <td class="px-6 py-4">Linda Williams</td>
@@ -542,18 +542,40 @@
                     if(scrollEl) scrollEl.style.overflow = '';
                 }
             });
+
+            // Orders Table Filtering
+            const filterBtns = document.querySelectorAll('.order-filter-btn');
+            const orderRows = document.querySelectorAll('.order-row');
+
+            if(filterBtns.length > 0 && orderRows.length > 0) {
+                filterBtns.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        // Reset button styles
+                        filterBtns.forEach(b => {
+                            b.classList.remove('bg-gray-200', 'text-gray-800');
+                            b.classList.add('bg-white', 'text-gray-700');
+                        });
+                        
+                        // Set active style for clicked button
+                        btn.classList.remove('bg-white', 'text-gray-700');
+                        btn.classList.add('bg-gray-200', 'text-gray-800');
+                        
+                        const filterVal = btn.getAttribute('data-filter');
+                        
+                        // Filter rows
+                        orderRows.forEach(row => {
+                            if (filterVal === 'all' || row.getAttribute('data-status') === filterVal) {
+                                row.style.display = '';
+                            } else {
+                                row.style.display = 'none';
+                            }
+                        });
+                    });
+                });
+            }
         });
     </script>
     <style>
-        /* Hide scrollbar universally */
-        ::-webkit-scrollbar {
-            display: none;
-        }
-        * {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
